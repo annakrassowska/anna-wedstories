@@ -25,7 +25,7 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
-      ([e]) => e.isIntersecting && (el.classList.add("is-visible"), io.disconnect()),
+      ([e]) => e?.isIntersecting && (el.classList.add("is-visible"), io.disconnect()),
       { threshold: 0.12 },
     );
     io.observe(el);
@@ -223,9 +223,9 @@ function Portfolio({ t }: { t: Dict }) {
       {idx !== null && (
         <div role="dialog" aria-modal="true" aria-label={t.portfolio.alts[idx]} className="fixed inset-0 z-[70] flex items-center justify-center bg-foreground/95 p-4 animate-rise"
           onClick={() => setIdx(null)}
-          onTouchStart={(e) => (touch.current = e.touches[0].clientX)}
-          onTouchEnd={(e) => { const d = e.changedTouches[0].clientX - touch.current; if (Math.abs(d) > 50) setIdx((i) => (i! + (d < 0 ? 1 : -1) + n) % n); }}>
-          <img src={GALLERY[idx].src} alt={t.portfolio.alts[idx]} className="max-h-[85vh] max-w-full object-contain" onClick={(e) => e.stopPropagation()} />
+          onTouchStart={(e) => (touch.current = (e.touches[0]?.clientX ?? 0))}
+          onTouchEnd={(e) => { const d = (e.changedTouches[0]?.clientX ?? 0) - touch.current; if (Math.abs(d) > 50) setIdx((i) => (i! + (d < 0 ? 1 : -1) + n) % n); }}>
+          <img src={GALLERY[idx]?.src} alt={t.portfolio.alts[idx]} className="max-h-[85vh] max-w-full object-contain" onClick={(e) => e.stopPropagation()} />
           <button autoFocus onClick={() => setIdx(null)} aria-label={t.portfolio.close} className="absolute right-4 top-4 p-3 eyebrow text-ivory">✕</button>
           <button onClick={(e) => { e.stopPropagation(); setIdx((idx - 1 + n) % n); }} aria-label={t.portfolio.prev} className="absolute left-2 top-1/2 -translate-y-1/2 p-4 text-3xl text-ivory">‹</button>
           <button onClick={(e) => { e.stopPropagation(); setIdx((idx + 1) % n); }} aria-label={t.portfolio.next} className="absolute right-2 top-1/2 -translate-y-1/2 p-4 text-3xl text-ivory">›</button>
@@ -291,9 +291,9 @@ function Contact({ t, lang, wa }: { t: Dict; lang: Lang; wa: string | null }) {
     const errs: Record<string, string> = {};
     for (const f of ["name", "email", "date", "location"]) if (!String(fd.get(f) ?? "").trim()) errs[f] = c.errors.required;
     const email = String(fd.get("email") ?? "");
-    if (!errs.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errs.email = c.errors.email;
-    if (fd.getAll("services").length === 0) errs.services = c.errors.services;
-    if (!fd.get("consent")) errs.consent = c.errors.consent;
+    if (!errs["email"] && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errs["email"] = c.errors.email;
+    if (fd.getAll("services").length === 0) errs["services"] = c.errors.services;
+    if (!fd.get("consent")) errs["consent"] = c.errors.consent;
     setErrors(errs);
     if (Object.keys(errs).length) {
       (form.querySelector(`[name="${Object.keys(errs)[0]}"]`) as HTMLElement | null)?.focus();
