@@ -16,7 +16,7 @@ export const INSTAGRAM_URL = ""; // [INSTAGRAM URL]
  *  (e.g. Formspree "https://formspree.io/f/xxxx"). Set VITE_FORM_ENDPOINT
  *  in your hosting environment variables, or paste it here. */
 export const FORM_ENDPOINT: string =
-  (import.meta.env.VITE_FORM_ENDPOINT as string | undefined) ?? "";
+  (import.meta.env["VITE_FORM_ENDPOINT"] as string | undefined) ?? "";
 
 export function whatsappLink(message: string) {
   const n = WHATSAPP_NUMBER.replace(/\D/g, "");
