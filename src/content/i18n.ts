@@ -33,6 +33,16 @@ const en = {
       { t: "Instagram Stories", d: "Little moments, beautiful details, and candid snippets of your celebration, thoughtfully captured for your stories." },
     ],
   },
+  packages: {
+    eyebrow: "Packages",
+    title: "A package for every story.",
+    items: [
+      { name: "ESSENTIAL", hours: "4 hours of coverage", features: ["1 one-minute highlight video", "1 reel for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €290" },
+      { name: "PREMIUM", hours: "6 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €350" },
+      { name: "EXCLUSIVE", hours: "9 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €450" },
+    ],
+  },
+
   portfolio: {
     eyebrow: "Selected stories",
     title: "Moments, as they happened.",
@@ -121,6 +131,16 @@ const es: Dict = {
       { t: "Historias de Instagram", d: "Pequeños momentos, detalles bonitos y escenas espontáneas de vuestra celebración, capturados con mimo para vuestras historias." },
     ],
   },
+  packages: {
+    eyebrow: "Paquetes",
+    title: "Un paquete para cada historia.",
+    items: [
+      { name: "ESSENTIAL", hours: "4 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "1 reel para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 290 €" },
+      { name: "PREMIUM", hours: "6 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 350 €" },
+      { name: "EXCLUSIVE", hours: "9 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 450 €" },
+    ],
+  },
+
   portfolio: {
     eyebrow: "Historias seleccionadas",
     title: "Momentos, tal como ocurrieron.",
@@ -204,6 +224,16 @@ const pl: Dict = {
       { t: "Stories na Instagram", d: "Drobne chwile, piękne detale i spontaniczne ujęcia z Waszego wesela, starannie uchwycone do Waszych stories." },
     ],
   },
+  packages: {
+    eyebrow: "Pakiety",
+    title: "Pakiet dla każdej historii.",
+    items: [
+      { name: "ESSENTIAL", hours: "4 godziny relacji", features: ["1 film podsumowujący (1 minuta)", "1 reel na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 290 €" },
+      { name: "PREMIUM", hours: "6 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 350 €" },
+      { name: "EXCLUSIVE", hours: "9 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 450 €" },
+    ],
+  },
+
   portfolio: {
     eyebrow: "Wybrane historie",
     title: "Chwile, takie jakie były.",

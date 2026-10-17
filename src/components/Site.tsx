@@ -50,6 +50,7 @@ export function Site({ lang }: { lang: Lang }) {
         <Hero t={t} />
         <Intro t={t} />
         <Services t={t} />
+        <Packages t={t} />
         <Portfolio t={t} />
         <Experience t={t} />
         <About t={t} />
@@ -179,6 +180,32 @@ function Services({ t }: { t: Dict }) {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Packages({ t }: { t: Dict }) {
+  const p = t.packages;
+  return (
+    <section id="packages" className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-36">
+      <Reveal>
+        <p className="eyebrow text-taupe">{p.eyebrow}</p>
+        <h2 className="headline mt-5">{p.title}</h2>
+      </Reveal>
+      <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
+        {p.items.map((item, i) => (
+          <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-8 md:p-10" : "flex flex-col border p-8 md:p-10"}>
+            <span className="eyebrow text-taupe">0{i + 1}</span>
+            <h3 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h3>
+            <p className="mt-6 border-b pb-6 font-serif text-3xl">{item.hours}</p>
+            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
+              {item.features.map((f) => <li key={f}>{f}</li>)}
+            </ul>
+            <p className="mt-8 font-serif text-2xl">{item.price}</p>
+            <a href="#contact" className="btn btn-ghost mt-8 self-start">{t.nav.cta}</a>
+          </Reveal>
+        ))}
       </div>
     </section>
   );
