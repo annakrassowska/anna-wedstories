@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
-import { dict, LANGS, langPath, type Lang, type Dict } from "@/content/i18n";
+import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
 import { FORM_ENDPOINT, INSTAGRAM_URL, whatsappLink } from "@/content/site";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import hero from "@/assets/hero.jpg";
@@ -34,7 +34,7 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
   return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }
 
-export function Site({ lang }: { lang: Lang }) {
+export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "packages" }) {
   const t = dict[lang];
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -45,19 +45,20 @@ export function Site({ lang }: { lang: Lang }) {
   return (
     <>
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-background focus:p-3">Skip to content</a>
-      <Header t={t} lang={lang} />
-      <main id="main">
+      <Header t={t} lang={lang} page={page} />
+      <main id="main" className={page === "packages" ? "pt-20" : undefined}>
+        {page === "packages" ? <Packages t={t} lang={lang} /> : <>
         <Hero t={t} />
         <Intro t={t} />
         <Services t={t} />
-        <Packages t={t} />
         <Portfolio t={t} />
         <Experience t={t} />
         <About t={t} />
         <Contact t={t} lang={lang} wa={wa} />
         <Final t={t} />
+        </>}
       </main>
-      <Footer t={t} wa={wa} />
+      <Footer t={t} wa={wa} lang={lang} />
       {wa && (
         <a href={wa} target="_blank" rel="noopener noreferrer" aria-label={t.whatsapp.label}
           className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-105">
@@ -68,7 +69,7 @@ export function Site({ lang }: { lang: Lang }) {
   );
 }
 
-function Header({ t, lang }: { t: Dict; lang: Lang }) {
+function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packages" }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -83,17 +84,18 @@ function Header({ t, lang }: { t: Dict; lang: Lang }) {
     return () => window.removeEventListener("keydown", k);
   }, [open]);
   const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["portfolio", "#portfolio"], ["contact", "#contact"]] as const;
-  const solid = scrolled || open;
+  const solid = scrolled || open || page === "packages";
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid ? "bg-background/95 text-foreground backdrop-blur border-b" : "text-ivory"}`}>
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:h-20 md:px-10">
-        <a href="#top" className="font-serif text-2xl tracking-tight">Anna <em className="italic">WedStories</em></a>
+        <Link to={langPath(lang)} hash="top" className="font-serif text-2xl tracking-tight">Anna <em className="italic">WedStories</em></Link>
         <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
-          {links.map(([k, h]) => <a key={k} href={h} className="eyebrow opacity-80 transition-opacity hover:opacity-100">{t.nav[k]}</a>)}
+          {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow opacity-80 transition-opacity hover:opacity-100">{t.nav[k]}</Link>)}
+          <Link to={packagePath(lang)} aria-current={page === "packages" ? "page" : undefined} className="eyebrow opacity-80 hover:opacity-100">{t.packages.eyebrow}</Link>
         </nav>
         <div className="flex items-center gap-4">
-          <LangSwitch lang={lang} label={t.nav.lang} />
-          <a href="#contact" className={`btn hidden md:inline-flex ${solid ? "btn-solid" : "btn-outline-light"}`}>{t.nav.cta}</a>
+          <LangSwitch lang={lang} label={t.nav.lang} page={page} />
+          <Link to={langPath(lang)} hash="contact" className={`btn hidden md:inline-flex ${solid ? "btn-solid" : "btn-outline-light"}`}>{t.nav.cta}</Link>
           <button className="lg:hidden p-2" aria-expanded={open} aria-controls="mnav" aria-label={open ? t.nav.close : t.nav.menu} onClick={() => setOpen(!open)}>
             <span className={`block h-px w-6 bg-current transition-transform ${open ? "translate-y-[3px] rotate-45" : ""}`} />
             <span className={`mt-1.5 block h-px w-6 bg-current transition-transform ${open ? "-translate-y-[4px] -rotate-45" : ""}`} />
@@ -102,22 +104,23 @@ function Header({ t, lang }: { t: Dict; lang: Lang }) {
       </div>
       <div id="mnav" hidden={!open} className="lg:hidden border-t bg-background px-5 pb-8 pt-4 animate-rise">
         <nav aria-label="Mobile" className="flex flex-col">
-          {links.map(([k, h]) => <a key={k} href={h} onClick={() => setOpen(false)} className="border-b py-4 font-serif text-3xl">{t.nav[k]}</a>)}
+          {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} onClick={() => setOpen(false)} className="border-b py-4 font-serif text-3xl">{t.nav[k]}</Link>)}
+          <Link to={packagePath(lang)} onClick={() => setOpen(false)} className="border-b py-4 font-serif text-3xl">{t.packages.eyebrow}</Link>
         </nav>
-        <a href="#contact" onClick={() => setOpen(false)} className="btn btn-solid mt-6 w-full">{t.nav.cta}</a>
+        <Link to={langPath(lang)} hash="contact" onClick={() => setOpen(false)} className="btn btn-solid mt-6 w-full">{t.nav.cta}</Link>
       </div>
     </header>
   );
 }
 
-function LangSwitch({ lang, label }: { lang: Lang; label: string }) {
+function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: "home" | "packages" }) {
   return (
     <nav aria-label={label}>
       <ul className="flex items-center gap-2 eyebrow">
         {LANGS.map((l, i) => (
           <li key={l} className="flex items-center gap-2">
             {i > 0 && <span aria-hidden className="opacity-40">/</span>}
-            <Link to={langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
+            <Link to={page === "packages" ? packagePath(l) : langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
               className={`py-2 ${l === lang ? "underline underline-offset-4" : "opacity-60 hover:opacity-100"}`}>{l.toUpperCase()}</Link>
           </li>
         ))}
@@ -185,17 +188,17 @@ function Services({ t }: { t: Dict }) {
   );
 }
 
-function Packages({ t }: { t: Dict }) {
+function Packages({ t, lang }: { t: Dict; lang: Lang }) {
   const p = t.packages;
   return (
     <section id="packages" className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-36">
       <Reveal>
         <p className="eyebrow text-taupe">{p.eyebrow}</p>
-        <h2 className="headline mt-5">{p.title}</h2>
+        <h1 className="headline mt-5">{p.title}</h1>
       </Reveal>
       <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
         {p.items.map((item, i) => (
-          <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-8 md:p-10" : "flex flex-col border p-8 md:p-10"}>
+          <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-[10px]" : "flex flex-col border p-[10px]"}>
             <span className="eyebrow text-taupe">0{i + 1}</span>
             <h3 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h3>
             <p className="mt-6 border-b pb-6 font-serif text-3xl">{item.hours}</p>
@@ -203,7 +206,7 @@ function Packages({ t }: { t: Dict }) {
               {item.features.map((f) => <li key={f}>{f}</li>)}
             </ul>
             <p className="mt-8 font-serif text-2xl">{item.price}</p>
-            <a href="#contact" className="btn btn-ghost mt-8 self-start">{t.nav.cta}</a>
+            <Link to={langPath(lang)} hash="contact" className="btn btn-ghost mt-8 self-start">{t.nav.cta}</Link>
           </Reveal>
         ))}
       </div>
@@ -414,7 +417,7 @@ function Final({ t }: { t: Dict }) {
   );
 }
 
-function Footer({ t, wa }: { t: Dict; wa: string | null }) {
+function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
   const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["portfolio", "#portfolio"], ["contact", "#contact"]] as const;
   return (
     <footer className="mx-auto max-w-[1400px] px-5 py-16 md:px-10">
@@ -424,7 +427,8 @@ function Footer({ t, wa }: { t: Dict; wa: string | null }) {
           <p className="mt-2 text-sm text-muted-foreground">{t.footer.location}</p>
         </div>
         <nav aria-label={t.footer.nav} className="flex flex-wrap gap-x-8 gap-y-3">
-          {links.map(([k, h]) => <a key={k} href={h} className="eyebrow hover:underline">{t.nav[k]}</a>)}
+          {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow hover:underline">{t.nav[k]}</Link>)}
+          <Link to={packagePath(lang)} className="eyebrow hover:underline">{t.packages.eyebrow}</Link>
           {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">Instagram</a>}
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">WhatsApp</a>}
         </nav>

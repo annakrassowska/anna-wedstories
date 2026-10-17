@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Localized package pages reuse the Site shell with a packages mode; language switches retain the current page to keep navigation consistent.
+- Use trailing-underscore route filenames for package pages under language URLs so homepage content does not wrap the package page.
