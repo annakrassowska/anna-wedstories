@@ -1,6 +1,7 @@
 export type Lang = "en" | "es" | "pl";
 export const LANGS: Lang[] = ["en", "es", "pl"];
-export const langPath = (l: Lang) => (l === "en" ? "/" : `/${l}`);
+export const langPath = (l: Lang) => l === "en" ? "/" : l === "es" ? "/es" : "/pl";
+export const packagePath = (l: Lang) => l === "en" ? "/packages" : l === "es" ? "/es/packages" : "/pl/packages";
 
 const en = {
   meta: {
@@ -37,9 +38,9 @@ const en = {
     eyebrow: "Packages",
     title: "A package for every story.",
     items: [
-      { name: "ESSENTIAL", hours: "4 hours of coverage", features: ["1 one-minute highlight video", "1 reel for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €290" },
-      { name: "PREMIUM", hours: "6 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €350" },
-      { name: "EXCLUSIVE", hours: "9 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Schedule chosen by the couple"], price: "from €450" },
+      { name: "ESSENTIAL", hours: "4 hours of coverage", features: ["1 one-minute highlight video", "1 reel for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €290 + IVA (VAT)" },
+      { name: "PREMIUM", hours: "6 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €350 + IVA (VAT)" },
+      { name: "EXCLUSIVE", hours: "9 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €450 + IVA (VAT)" },
     ],
   },
 
@@ -135,9 +136,9 @@ const es: Dict = {
     eyebrow: "Paquetes",
     title: "Un paquete para cada historia.",
     items: [
-      { name: "ESSENTIAL", hours: "4 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "1 reel para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 290 €" },
-      { name: "PREMIUM", hours: "6 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 350 €" },
-      { name: "EXCLUSIVE", hours: "9 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 450 €" },
+      { name: "ESSENTIAL", hours: "4 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "1 reel para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 290 € + IVA (VAT)" },
+      { name: "PREMIUM", hours: "6 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 350 € + IVA (VAT)" },
+      { name: "EXCLUSIVE", hours: "9 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 450 € + IVA (VAT)" },
     ],
   },
 
@@ -228,9 +229,9 @@ const pl: Dict = {
     eyebrow: "Pakiety",
     title: "Pakiet dla każdej historii.",
     items: [
-      { name: "ESSENTIAL", hours: "4 godziny relacji", features: ["1 film podsumowujący (1 minuta)", "1 reel na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 290 €" },
-      { name: "PREMIUM", hours: "6 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 350 €" },
-      { name: "EXCLUSIVE", hours: "9 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 450 €" },
+      { name: "ESSENTIAL", hours: "4 godziny relacji", features: ["1 film podsumowujący (1 minuta)", "1 reel na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 290 € + IVA (VAT)" },
+      { name: "PREMIUM", hours: "6 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 350 € + IVA (VAT)" },
+      { name: "EXCLUSIVE", hours: "9 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 450 € + IVA (VAT)" },
     ],
   },
 

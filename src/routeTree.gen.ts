@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EsRouteImport } from './routes/es'
+import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PlRouteImport } from './routes/pl'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as EsPackagesRouteImport } from './routes/es_.packages'
+import { Route as PlPackagesRouteImport } from './routes/pl_.packages'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,6 +25,11 @@ const IndexRoute = IndexRouteImport.update({
 const EsRoute = EsRouteImport.update({
   id: '/es',
   path: '/es',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlRoute = PlRouteImport.update({
@@ -34,39 +42,83 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EsPackagesRoute = EsPackagesRouteImport.update({
+  id: '/es_/packages',
+  path: '/es/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlPackagesRoute = PlPackagesRouteImport.update({
+  id: '/pl_/packages',
+  path: '/pl/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/es': typeof EsRoute
+  '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/es/packages': typeof EsPackagesRoute
+  '/pl/packages': typeof PlPackagesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/es': typeof EsRoute
+  '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/es/packages': typeof EsPackagesRoute
+  '/pl/packages': typeof PlPackagesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/es': typeof EsRoute
+  '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/es_/packages': typeof EsPackagesRoute
+  '/pl_/packages': typeof PlPackagesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/es' | '/pl' | '/privacy'
+  fullPaths:
+    | '/'
+    | '/es'
+    | '/packages'
+    | '/pl'
+    | '/privacy'
+    | '/es/packages'
+    | '/pl/packages'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/es' | '/pl' | '/privacy'
-  id: '__root__' | '/' | '/es' | '/pl' | '/privacy'
+  to:
+    | '/'
+    | '/es'
+    | '/packages'
+    | '/pl'
+    | '/privacy'
+    | '/es/packages'
+    | '/pl/packages'
+  id:
+    | '__root__'
+    | '/'
+    | '/es'
+    | '/packages'
+    | '/pl'
+    | '/privacy'
+    | '/es_/packages'
+    | '/pl_/packages'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EsRoute: typeof EsRoute
+  PackagesRoute: typeof PackagesRoute
   PlRoute: typeof PlRoute
   PrivacyRoute: typeof PrivacyRoute
+  EsPackagesRoute: typeof EsPackagesRoute
+  PlPackagesRoute: typeof PlPackagesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -85,6 +137,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pl': {
       id: '/pl'
       path: '/pl'
@@ -99,14 +158,31 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/es_/packages': {
+      id: '/es_/packages'
+      path: '/es/packages'
+      fullPath: '/es/packages'
+      preLoaderRoute: typeof EsPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pl_/packages': {
+      id: '/pl_/packages'
+      path: '/pl/packages'
+      fullPath: '/pl/packages'
+      preLoaderRoute: typeof PlPackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EsRoute: EsRoute,
+  PackagesRoute: PackagesRoute,
   PlRoute: PlRoute,
   PrivacyRoute: PrivacyRoute,
+  EsPackagesRoute: EsPackagesRoute,
+  PlPackagesRoute: PlPackagesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
