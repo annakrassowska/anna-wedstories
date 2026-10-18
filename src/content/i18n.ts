@@ -12,7 +12,7 @@ const en = {
   nav: { home: "Home", about: "About", services: "Services", portfolio: "Portfolio", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
   hero: {
     title: "Wedding content creator in\u00a0Málaga",
-    sub: "Honest moments. Beautiful details. Memories made to be relived.",
+    sub: "Relive your wedding day within 24 hours. Candid videos, genuine emotions, and beautiful memories ready to share.",
     location: "Málaga · Costa del Sol · Spain",
     cta: "Check Your Date",
     cta2: "Explore the Stories",
@@ -109,8 +109,8 @@ const es: Dict = {
   },
   nav: { home: "Inicio", about: "Sobre mí", services: "Servicios", portfolio: "Portfolio", contact: "Contacto", cta: "Consulta tu fecha", menu: "Abrir menú", close: "Cerrar menú", lang: "Idioma" },
   hero: {
-    title: "Tu boda, tal como la sentiste.",
-    sub: "Momentos sinceros. Detalles bonitos. Recuerdos para volver a vivir.",
+    title: "Wedding content creator en\u00a0Málaga",
+    sub: "Revivid vuestra boda en menos de 24 horas. Vídeos espontáneos, emociones reales y recuerdos preciosos listos para compartir.",
     location: "Málaga · Costa del Sol · España",
     cta: "Consulta tu fecha",
     cta2: "Descubre las historias",
@@ -202,8 +202,8 @@ const pl: Dict = {
   },
   nav: { home: "Start", about: "O mnie", services: "Usługi", portfolio: "Portfolio", contact: "Kontakt", cta: "Sprawdź termin", menu: "Otwórz menu", close: "Zamknij menu", lang: "Język" },
   hero: {
-    title: "Wasz dzień ślubu — taki, jaki był naprawdę.",
-    sub: "Szczere chwile. Piękne detale. Wspomnienia, do których chce się wracać.",
+    title: "Wedding content creator w Maladze",
+    sub: "Przeżyjcie Wasz dzień ślubu na nowo w ciągu 24 godzin. Niepozowane filmy, prawdziwe emocje i piękne wspomnienia gotowe, by się nimi podzielić.",
     location: "Malaga · Costa del Sol · Hiszpania",
     cta: "Sprawdź termin",
     cta2: "Zobacz historie",
