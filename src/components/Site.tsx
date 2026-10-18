@@ -136,7 +136,7 @@ function Hero({ t }: { t: Dict }) {
       <div className="mx-auto grid max-w-[1400px] items-center gap-6 px-5 pb-14 pt-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16 lg:px-10 lg:pb-28 lg:pt-36">
         <div className="order-2 min-w-0 lg:order-1">
           <p className="eyebrow animate-rise">{t.hero.location}</p>
-          <h1 className="display mt-5 max-w-3xl animate-rise [animation-delay:150ms]">{t.hero.title}</h1>
+          <h1 className="display mt-5 max-w-3xl animate-rise [animation-delay:150ms] lg:tracking-[-0.015em]">{t.hero.title}</h1>
           <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{t.hero.sub}</p>
           <div className="mt-10 flex flex-wrap gap-3 animate-rise [animation-delay:450ms]">
             <a href="#contact" className="btn btn-light">{t.hero.cta}</a>
