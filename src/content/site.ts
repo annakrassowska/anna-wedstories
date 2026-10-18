@@ -12,11 +12,8 @@ export const WHATSAPP_NUMBER = ""; // [WHATSAPPNUMBERWITHCOUNTRYCODE]
 /** Full Instagram URL. Leave empty to hide the link. */
 export const INSTAGRAM_URL = ""; // [INSTAGRAM URL]
 
-/** Form endpoint that accepts a JSON POST and returns 2xx on success
- *  (e.g. Formspree "https://formspree.io/f/xxxx"). Set VITE_FORM_ENDPOINT
- *  in your hosting environment variables, or paste it here. */
-export const FORM_ENDPOINT: string =
-  (import.meta.env["VITE_FORM_ENDPOINT"] as string | undefined) ?? "";
+/** Inquiry form (Tally). The contact section opens this link in a new tab. */
+export const TALLY_URL = "https://tally.so/forms/xXkebo";
 
 export function whatsappLink(message: string) {
   const n = WHATSAPP_NUMBER.replace(/\D/g, "");

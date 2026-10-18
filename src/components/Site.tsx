@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
-import { FORM_ENDPOINT, INSTAGRAM_URL, whatsappLink } from "@/content/site";
+import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import hero from "@/assets/hero.jpg";
 import heroVertical from "@/assets/hero-vertical.jpg";
@@ -55,7 +55,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
         <Portfolio t={t} />
         <Experience t={t} />
         <About t={t} />
-        <Contact t={t} lang={lang} wa={wa} />
+        <Contact t={t} wa={wa} />
         <Final t={t} />
         </>}
       </main>
@@ -309,100 +309,22 @@ function About({ t }: { t: Dict }) {
   );
 }
 
-type Status = "idle" | "sending" | "success" | "error" | "unconfigured";
-
-function Contact({ t, lang, wa }: { t: Dict; lang: Lang; wa: string | null }) {
+function Contact({ t, wa }: { t: Dict; wa: string | null }) {
   const c = t.contact;
-  const [status, setStatus] = useState<Status>("idle");
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const services = t.services.items.map((s) => s.t);
-
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    if (status === "sending") return;
-    const form = e.currentTarget;
-    const fd = new FormData(form);
-    const errs: Record<string, string> = {};
-    for (const f of ["name", "email", "date", "location"]) if (!String(fd.get(f) ?? "").trim()) errs[f] = c.errors.required;
-    const email = String(fd.get("email") ?? "");
-    if (!errs["email"] && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errs["email"] = c.errors.email;
-    if (fd.getAll("services").length === 0) errs["services"] = c.errors.services;
-    if (!fd.get("consent")) errs["consent"] = c.errors.consent;
-    setErrors(errs);
-    if (Object.keys(errs).length) {
-      (form.querySelector(`[name="${Object.keys(errs)[0]}"]`) as HTMLElement | null)?.focus();
-      return;
-    }
-    if (!FORM_ENDPOINT) { setStatus("unconfigured"); return; }
-    setStatus("sending");
-    try {
-      const payload = Object.fromEntries([...fd.keys()].map((k) => [k, fd.getAll(k).join(", ")]));
-      const res = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ ...payload, siteLanguage: lang, _subject: "New wedding inquiry — Anna WedStories" }),
-      });
-      if (!res.ok) throw new Error(String(res.status));
-      setStatus("success");
-      form.reset();
-    } catch {
-      setStatus("error");
-    }
-  }
-
-  const field = "mt-2 w-full border-0 border-b bg-transparent py-3 text-base outline-none transition-colors focus:border-foreground focus-visible:outline-none";
-  const Err = ({ k }: { k: string }) => errors[k] ? <p id={`${k}-err`} className="mt-2 text-sm text-destructive">{errors[k]}</p> : null;
-  const aria = (k: string) => ({ "aria-invalid": !!errors[k] || undefined, "aria-describedby": errors[k] ? `${k}-err` : undefined });
-
   return (
     <section id="contact" className="bg-secondary py-24 md:py-36">
-      <div className="mx-auto grid max-w-[1400px] gap-14 px-5 md:grid-cols-12 md:px-10">
-        <Reveal className="md:col-span-4">
-          <p className="eyebrow text-taupe">{c.eyebrow}</p>
-          <h2 className="headline mt-5">{c.title}</h2>
-          <p className="mt-6 leading-relaxed text-muted-foreground">{c.sub}</p>
-          {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-ghost mt-8">{t.whatsapp.label}</a>}
-        </Reveal>
-        <form onSubmit={onSubmit} noValidate className="grid gap-8 md:col-span-7 md:col-start-6 md:grid-cols-2">
-          <label className="block"><span className="eyebrow">{c.name} *</span><input name="name" autoComplete="name" className={field} {...aria("name")} /><Err k="name" /></label>
-          <label className="block"><span className="eyebrow">{c.email} *</span><input name="email" type="email" autoComplete="email" className={field} {...aria("email")} /><Err k="email" /></label>
-          <label className="block"><span className="eyebrow">{c.whatsapp}</span><input name="whatsapp" type="tel" autoComplete="tel" className={field} /></label>
-          <label className="block"><span className="eyebrow">{c.date} *</span><input name="date" type="date" className={field} {...aria("date")} /><Err k="date" /></label>
-          <label className="block md:col-span-2"><span className="eyebrow">{c.location} *</span><input name="location" className={field} {...aria("location")} /><Err k="location" /></label>
-          <fieldset className="md:col-span-2" {...aria("services")}>
-            <legend className="eyebrow">{c.services} *</legend>
-            <div className="mt-4 flex flex-wrap gap-3">
-              {services.map((s) => (
-                <label key={s} className="flex cursor-pointer items-center gap-2 border px-4 py-3 text-sm has-[:checked]:bg-primary has-[:checked]:text-primary-foreground has-[:focus-visible]:outline has-[:focus-visible]:outline-1">
-                  <input type="checkbox" name="services" value={s} className="sr-only" />{s}
-                </label>
-              ))}
-            </div>
-            <Err k="services" />
-          </fieldset>
-          <label className="block md:col-span-2"><span className="eyebrow">{c.language}</span>
-            <select name="preferredLanguage" defaultValue={lang} className={field}>
-              {(["en", "es", "pl"] as const).map((l) => <option key={l} value={l}>{c.langs[l]}</option>)}
-            </select>
-          </label>
-          <label className="block md:col-span-2"><span className="eyebrow">{c.message}</span><textarea name="message" rows={4} className={`${field} resize-y`} /></label>
-          <label className="flex items-start gap-3 text-sm text-muted-foreground md:col-span-2">
-            <input type="checkbox" name="consent" className="mt-1 h-4 w-4 accent-[var(--color-primary)]" {...aria("consent")} />
-            <span>{c.consent} <Link to="/privacy" className="underline">{t.footer.privacy}</Link></span>
-          </label>
-          <div className="md:col-span-2"><Err k="consent" /></div>
-          <div className="md:col-span-2">
-            <button type="submit" disabled={status === "sending"} className="btn btn-solid w-full disabled:opacity-60 md:w-auto">
-              {status === "sending" ? c.sending : c.submit}
-            </button>
-            <div role="status" aria-live="polite" className="mt-6 text-sm">
-              {status === "success" && <p>{c.success}</p>}
-              {status === "error" && <p className="text-destructive">{c.error}</p>}
-              {status === "unconfigured" && <p className="text-destructive">{c.notConfigured}</p>}
-            </div>
-          </div>
-        </form>
-      </div>
+      <Reveal className="mx-auto max-w-3xl px-5 text-center">
+        <p className="eyebrow text-taupe">{c.eyebrow}</p>
+        <h2 className="headline mt-5">{c.title}</h2>
+        <p className="mt-6 leading-relaxed text-muted-foreground">{c.sub}</p>
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <a href={TALLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-solid">{c.submit}</a>
+          {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">{t.whatsapp.label}</a>}
+        </div>
+        <p className="mt-10 text-xs text-muted-foreground">
+          <Link to="/privacy" className="underline">{t.footer.privacy}</Link>
+        </p>
+      </Reveal>
     </section>
   );
 }
