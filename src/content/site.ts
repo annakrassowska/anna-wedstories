@@ -12,8 +12,9 @@ export const WHATSAPP_NUMBER = ""; // [WHATSAPPNUMBERWITHCOUNTRYCODE]
 /** Full Instagram URL. Leave empty to hide the link. */
 export const INSTAGRAM_URL = ""; // [INSTAGRAM URL]
 
-/** Inquiry form (Tally). The contact section opens this link in a new tab. */
-export const TALLY_URL = "https://tally.so/forms/xXkebo";
+/** Inquiry form (Tally). The contact section opens this public link in a new tab.
+ *  (The editor link /forms/xXkebo is private; /r/xXkebo is the shareable one.) */
+export const TALLY_URL = "https://tally.so/r/xXkebo";
 
 export function whatsappLink(message: string) {
   const n = WHATSAPP_NUMBER.replace(/\D/g, "");
