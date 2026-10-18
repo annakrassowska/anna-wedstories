@@ -133,8 +133,8 @@ function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: "h
 function Hero({ t }: { t: Dict }) {
   return (
     <section id="top" className="bg-primary text-primary-foreground">
-      <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-16 pt-24 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-16 md:px-10 md:pb-28 md:pt-36">
-        <div className="order-2 min-w-0 md:order-1">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-16 pt-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16 lg:px-10 lg:pb-28 lg:pt-36">
+        <div className="order-2 min-w-0 lg:order-1">
           <p className="eyebrow animate-rise">{t.hero.location}</p>
           <h1 className="display mt-5 max-w-3xl animate-rise [animation-delay:150ms]">{t.hero.title}</h1>
           <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{t.hero.sub}</p>
@@ -143,9 +143,9 @@ function Hero({ t }: { t: Dict }) {
             <a href="#portfolio" className="btn btn-outline-light">{t.hero.cta2}</a>
           </div>
         </div>
-        <div className="order-1 w-full max-w-[420px] justify-self-center overflow-hidden md:order-2 md:max-w-[520px] md:justify-self-end">
+        <div className="order-1 w-full max-w-[300px] justify-self-center overflow-hidden sm:max-w-[380px] lg:order-2 lg:max-w-[520px] lg:justify-self-end">
           <img src={heroVertical} alt={t.hero.alt} width={848} height={1264} fetchPriority="high"
-            className="h-[62svh] min-h-[420px] w-full object-cover animate-slowzoom md:h-[min(78svh,760px)]" />
+            className="aspect-[3/4] w-full object-cover animate-slowzoom lg:aspect-auto lg:h-[min(78svh,760px)]" />
         </div>
       </div>
     </section>
