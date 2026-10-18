@@ -4,6 +4,7 @@ import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/cont
 import { FORM_ENDPOINT, INSTAGRAM_URL, whatsappLink } from "@/content/site";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import hero from "@/assets/hero.jpg";
+import heroVertical from "@/assets/hero-vertical.jpg";
 import detail from "@/assets/detail.jpg";
 import celebration from "@/assets/celebration.jpg";
 import creator from "@/assets/creator.jpg";
@@ -131,17 +132,20 @@ function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: "h
 
 function Hero({ t }: { t: Dict }) {
   return (
-    <section id="top" className="relative h-[100svh] min-h-[600px] overflow-hidden text-ivory">
-      <img src={hero} alt={t.hero.alt} width={1920} height={1152} fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover object-[45%_center] animate-slowzoom" />
-      <div className="absolute inset-0 bg-gradient-to-t from-overlay via-transparent to-overlay" />
-      <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-5 pb-16 md:px-10 md:pb-24">
-        <p className="eyebrow animate-rise">{t.hero.location}</p>
-        <h1 className="display mt-5 max-w-4xl animate-rise [animation-delay:150ms]">{t.hero.title}</h1>
-        <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{t.hero.sub}</p>
-        <div className="mt-10 flex flex-wrap gap-3 animate-rise [animation-delay:450ms]">
-          <a href="#contact" className="btn btn-light">{t.hero.cta}</a>
-          <a href="#portfolio" className="btn btn-outline-light">{t.hero.cta2}</a>
+    <section id="top" className="bg-primary text-primary-foreground">
+      <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-5 pb-16 pt-24 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-16 md:px-10 md:pb-28 md:pt-36">
+        <div className="order-2 min-w-0 md:order-1">
+          <p className="eyebrow animate-rise">{t.hero.location}</p>
+          <h1 className="display mt-5 max-w-3xl animate-rise [animation-delay:150ms]">{t.hero.title}</h1>
+          <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{t.hero.sub}</p>
+          <div className="mt-10 flex flex-wrap gap-3 animate-rise [animation-delay:450ms]">
+            <a href="#contact" className="btn btn-light">{t.hero.cta}</a>
+            <a href="#portfolio" className="btn btn-outline-light">{t.hero.cta2}</a>
+          </div>
+        </div>
+        <div className="order-1 w-full max-w-[420px] justify-self-center overflow-hidden md:order-2 md:max-w-[520px] md:justify-self-end">
+          <img src={heroVertical} alt={t.hero.alt} width={848} height={1264} fetchPriority="high"
+            className="h-[62svh] min-h-[420px] w-full object-cover animate-slowzoom md:h-[min(78svh,760px)]" />
         </div>
       </div>
     </section>
