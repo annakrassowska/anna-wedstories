@@ -11,7 +11,7 @@ const en = {
   },
   nav: { home: "Home", about: "About", services: "Services", portfolio: "Portfolio", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
   hero: {
-    title: "Your wedding day, as it felt.",
+    title: "Wedding content creator in\u00a0Málaga",
     sub: "Honest moments. Beautiful details. Memories made to be relived.",
     location: "Málaga · Costa del Sol · Spain",
     cta: "Check Your Date",
