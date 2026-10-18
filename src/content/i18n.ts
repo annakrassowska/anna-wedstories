@@ -202,7 +202,7 @@ const pl: Dict = {
   },
   nav: { home: "Start", about: "O mnie", services: "Usługi", portfolio: "Portfolio", contact: "Kontakt", cta: "Sprawdź termin", menu: "Otwórz menu", close: "Zamknij menu", lang: "Język" },
   hero: {
-    title: "Wedding content creator w Maladze",
+    title: "Wedding content creator w\u00a0Maladze",
     sub: "Przeżyjcie Wasz dzień ślubu na nowo w ciągu 24 godzin. Niepozowane filmy, prawdziwe emocje i piękne wspomnienia gotowe, by się nimi podzielić.",
     location: "Malaga · Costa del Sol · Hiszpania",
     cta: "Sprawdź termin",
