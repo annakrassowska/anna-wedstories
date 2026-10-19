@@ -157,7 +157,7 @@ function Intro({ t }: { t: Dict }) {
   return (
     <section className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-40">
       <Reveal className="md:col-span-5 md:col-start-1">
-        <img src={detailAsset.url} alt={t.intro.alt} width={1081} height={1920} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+        <img src={detailAsset.url} alt={t.intro.alt} width={1081} height={1920} loading="lazy" className="aspect-[4/5] w-full object-cover object-top" />
       </Reveal>
       <Reveal className="flex flex-col justify-center md:col-span-6 md:col-start-7">
         <p className="eyebrow text-taupe">{t.intro.eyebrow}</p>
