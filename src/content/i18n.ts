@@ -22,7 +22,7 @@ const en = {
     eyebrow: "Wedding content creation",
     p1: "Some moments happen in a second. The laughter before the ceremony, the little details no one else notices, the feeling of being surrounded by your favourite people.",
     p2: "Wedding content captures the atmosphere of your day in a natural, personal way, creating short-form memories you can revisit and share.",
-    alt: "A bride's hands holding a bouquet of olive branches and ivory roses",
+    alt: "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
   },
   services: {
     eyebrow: "Services",
@@ -118,7 +118,7 @@ const es: Dict = {
     eyebrow: "Contenido para bodas",
     p1: "Hay momentos que duran un segundo. Las risas antes de la ceremonia, esos pequeños detalles que nadie más ve, la sensación de estar rodeados de vuestra gente favorita.",
     p2: "El contenido de boda recoge la atmósfera de vuestro día de forma natural y personal, creando recuerdos en formato corto para revivir y compartir.",
-    alt: "Las manos de una novia sujetando un ramo de ramas de olivo y rosas marfil",
+    alt: "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
   },
   services: {
     eyebrow: "Servicios",
@@ -209,7 +209,7 @@ const pl: Dict = {
     eyebrow: "Treści ślubne",
     p1: "Niektóre chwile trwają zaledwie sekundę. Śmiech tuż przed ceremonią, drobne detale, których nikt inny nie zauważa, uczucie bycia otoczonym najbliższymi.",
     p2: "Treści ślubne oddają atmosferę Waszego dnia w naturalny, osobisty sposób — to krótkie wspomnienia, do których możecie wracać i którymi łatwo się podzielić.",
-    alt: "Dłonie panny młodej trzymające bukiet z gałązek oliwnych i kremowych róż",
+    alt: "Panna młoda w satynowym peniuarze patrzy na swoją suknię ślubną wiszącą na starej szafie",
   },
   services: {
     eyebrow: "Usługi",

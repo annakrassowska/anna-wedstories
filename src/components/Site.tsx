@@ -6,6 +6,7 @@ import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 import hero from "@/assets/hero.jpg";
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detail from "@/assets/detail.jpg";
+import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
 import celebration from "@/assets/celebration.jpg";
 import creator from "@/assets/creator.jpg";
 import veil from "@/assets/veil.jpg";
@@ -156,7 +157,7 @@ function Intro({ t }: { t: Dict }) {
   return (
     <section className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-40">
       <Reveal className="md:col-span-5 md:col-start-1">
-        <img src={detail} alt={t.intro.alt} width={896} height={1152} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+        <img src={detailAsset.url} alt={t.intro.alt} width={1081} height={1920} loading="lazy" className="aspect-[4/5] w-full object-cover" />
       </Reveal>
       <Reveal className="flex flex-col justify-center md:col-span-6 md:col-start-7">
         <p className="eyebrow text-taupe">{t.intro.eyebrow}</p>
