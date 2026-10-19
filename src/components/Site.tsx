@@ -162,7 +162,6 @@ function Intro({ t }: { t: Dict }) {
         <p className="eyebrow text-taupe">{t.intro.eyebrow}</p>
         <p className="mt-8 font-serif text-3xl leading-snug md:text-4xl">{t.intro.p1}</p>
         <p className="mt-8 max-w-lg text-muted-foreground leading-relaxed">{t.intro.p2}</p>
-        <p className="mt-6 max-w-lg text-sm italic text-taupe">{t.intro.placeholder}</p>
       </Reveal>
     </section>
   );

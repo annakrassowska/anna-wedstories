@@ -4,3 +4,4 @@
 - [x] Verify package pages and navigation.
 - [x] Make the banner photo vertical (portrait) on desktop, tablet and mobile.
 - [x] Replace the contact form with a button that opens the Tally inquiry form (public share link).
+- [x] Remove the leftover intro placeholder paragraph in all three languages.
