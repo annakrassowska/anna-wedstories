@@ -2,10 +2,13 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
 import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
+import { REELS } from "@/content/reels";
+import { Instagram, Play } from "lucide-react";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import hero from "@/assets/hero.jpg";
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detail from "@/assets/detail.jpg";
+import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
 import celebration from "@/assets/celebration.jpg";
 import creator from "@/assets/creator.jpg";
 import veil from "@/assets/veil.jpg";
@@ -53,6 +56,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
         <Intro t={t} />
         <Services t={t} />
         <Portfolio t={t} />
+        <Reels t={t} />
         <Experience t={t} />
         <About t={t} />
         <Contact t={t} wa={wa} />
@@ -156,7 +160,7 @@ function Intro({ t }: { t: Dict }) {
   return (
     <section className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-40">
       <Reveal className="md:col-span-5 md:col-start-1">
-        <img src={detail} alt={t.intro.alt} width={896} height={1152} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+        <img src={detailAsset.url} alt={t.intro.alt} width={1081} height={1920} loading="lazy" className="h-auto w-full" />
       </Reveal>
       <Reveal className="flex flex-col justify-center md:col-span-6 md:col-start-7">
         <p className="eyebrow text-taupe">{t.intro.eyebrow}</p>
@@ -264,6 +268,44 @@ function Portfolio({ t }: { t: Dict }) {
           <button onClick={(e) => { e.stopPropagation(); setIdx((idx + 1) % n); }} aria-label={t.portfolio.next} className="absolute right-2 top-1/2 -translate-y-1/2 p-4 text-3xl text-ivory">›</button>
         </div>
       )}
+    </section>
+  );
+}
+
+function Reels({ t }: { t: Dict }) {
+  const r = t.reels;
+  return (
+    <section id="reels" className="bg-secondary py-24 md:py-36">
+      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+        <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <p className="eyebrow text-taupe">{r.eyebrow}</p>
+            <h2 className="headline mt-5 max-w-xl">{r.title}</h2>
+            <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">{r.sub}</p>
+          </div>
+          {INSTAGRAM_URL && (
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost shrink-0">
+              <Instagram className="size-4" aria-hidden />
+              {r.follow}
+            </a>
+          )}
+        </Reveal>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {REELS.map((reel, i) => (
+            <Reveal key={reel.id}>
+              <a href={reel.url} target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden">
+                <img src={reel.thumb} alt={r.alts[i]} width={1080} height={1920} loading="lazy"
+                  className="aspect-[9/16] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+                <span className="absolute inset-0 bg-overlay opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <span className="absolute bottom-4 left-4 flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform duration-500 group-hover:scale-110">
+                  <Play className="size-4 translate-x-[1px]" aria-hidden />
+                </span>
+                <span className="sr-only">{r.watch}</span>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

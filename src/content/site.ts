@@ -10,7 +10,8 @@ export const SITE_URL = "https://annawedstories.com"; // [REPLACE once domain is
 export const WHATSAPP_NUMBER = ""; // [WHATSAPPNUMBERWITHCOUNTRYCODE]
 
 /** Full Instagram URL. Leave empty to hide the link. */
-export const INSTAGRAM_URL = ""; // [INSTAGRAM URL]
+export const INSTAGRAM_URL = "https://www.instagram.com/anna_wedstories";
+export const INSTAGRAM_HANDLE = "anna_wedstories";
 
 /** Inquiry form (Tally). The contact section opens this public link in a new tab.
  *  (The editor link /forms/xXkebo is private; /r/xXkebo is the shareable one.) */

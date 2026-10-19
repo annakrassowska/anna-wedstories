@@ -22,7 +22,7 @@ const en = {
     eyebrow: "Wedding content creation",
     p1: "Some moments happen in a second. The laughter before the ceremony, the little details no one else notices, the feeling of being surrounded by your favourite people.",
     p2: "Wedding content captures the atmosphere of your day in a natural, personal way, creating short-form memories you can revisit and share.",
-    alt: "A bride's hands holding a bouquet of olive branches and ivory roses",
+    alt: "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
   },
   services: {
     eyebrow: "Services",
@@ -60,6 +60,18 @@ const en = {
       "Bridal bouquet of olive branches and ivory roses",
       "A content creator filming a bride in a stone courtyard",
       "A couple laughing on a terrace above the Mediterranean",
+    ],
+  },
+  reels: {
+    eyebrow: "Reels",
+    title: "Watch the moments move.",
+    sub: "Short films from real weddings — the glances, the dances, the happy tears.",
+    follow: "Follow @anna_wedstories",
+    watch: "Watch on Instagram",
+    alts: [
+      "A bride and groom kissing under a stone archway lit with magenta light",
+      "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
+      "Guests celebrating at a wedding, captured for a social media reel",
     ],
   },
   experience: {
@@ -118,7 +130,7 @@ const es: Dict = {
     eyebrow: "Contenido para bodas",
     p1: "Hay momentos que duran un segundo. Las risas antes de la ceremonia, esos pequeños detalles que nadie más ve, la sensación de estar rodeados de vuestra gente favorita.",
     p2: "El contenido de boda recoge la atmósfera de vuestro día de forma natural y personal, creando recuerdos en formato corto para revivir y compartir.",
-    alt: "Las manos de una novia sujetando un ramo de ramas de olivo y rosas marfil",
+    alt: "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
   },
   services: {
     eyebrow: "Servicios",
@@ -153,6 +165,18 @@ const es: Dict = {
       "Ramo de novia de ramas de olivo y rosas marfil",
       "Una creadora de contenido grabando a una novia en un patio de piedra",
       "Una pareja riendo en una terraza sobre el Mediterráneo",
+    ],
+  },
+  reels: {
+    eyebrow: "Reels",
+    title: "Mira los momentos en movimiento.",
+    sub: "Cortometrajes de bodas reales: las miradas, los bailes, las lágrimas de felicidad.",
+    follow: "Sígueme en @anna_wedstories",
+    watch: "Ver en Instagram",
+    alts: [
+      "Una novia y un novio besándose bajo un arco de piedra con luz magenta",
+      "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
+      "Invitados celebrando una boda, grabados para un reel de redes sociales",
     ],
   },
   experience: {
@@ -209,7 +233,7 @@ const pl: Dict = {
     eyebrow: "Treści ślubne",
     p1: "Niektóre chwile trwają zaledwie sekundę. Śmiech tuż przed ceremonią, drobne detale, których nikt inny nie zauważa, uczucie bycia otoczonym najbliższymi.",
     p2: "Treści ślubne oddają atmosferę Waszego dnia w naturalny, osobisty sposób — to krótkie wspomnienia, do których możecie wracać i którymi łatwo się podzielić.",
-    alt: "Dłonie panny młodej trzymające bukiet z gałązek oliwnych i kremowych róż",
+    alt: "Panna młoda w satynowym peniuarze patrzy na swoją suknię ślubną wiszącą na starej szafie",
   },
   services: {
     eyebrow: "Usługi",
@@ -244,6 +268,18 @@ const pl: Dict = {
       "Bukiet ślubny z gałązek oliwnych i kremowych róż",
       "Twórczyni treści filmująca pannę młodą na kamiennym dziedzińcu",
       "Para śmiejąca się na tarasie nad Morzem Śródziemnym",
+    ],
+  },
+  reels: {
+    eyebrow: "Reels",
+    title: "Zobacz, jak te chwile ożywają.",
+    sub: "Krótkie filmy z prawdziwych ślubów — spojrzenia, tańce i łzy szczęścia.",
+    follow: "Obserwuj @anna_wedstories",
+    watch: "Obejrzyj na Instagramie",
+    alts: [
+      "Panna młoda i pan młody całują się pod kamiennym łukiem w magentowym świetle",
+      "Panna młoda w satynowym peniuarze patrzy na swoją suknię wiszącą na starej szafie",
+      "Goście celebrujący wesele, nagrani na reel do mediów społecznościowych",
     ],
   },
   experience: {
