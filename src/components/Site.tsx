@@ -4,7 +4,7 @@ import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/cont
 import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import hero from "@/assets/hero.jpg";
-import heroVertical from "@/assets/hero-vertical.jpg";
+import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detail from "@/assets/detail.jpg";
 import celebration from "@/assets/celebration.jpg";
 import creator from "@/assets/creator.jpg";
@@ -144,7 +144,7 @@ function Hero({ t }: { t: Dict }) {
           </div>
         </div>
         <div className="order-1 w-full max-w-[280px] justify-self-center overflow-hidden sm:max-w-[380px] lg:order-2 lg:max-w-[520px] lg:justify-self-end">
-          <img src={heroVertical} alt={t.hero.alt} width={848} height={1264} fetchPriority="high"
+          <img src={heroVerticalAsset.url} alt={t.hero.alt} width={1080} height={1920} fetchPriority="high"
             className="aspect-[3/4] max-h-[44svh] w-full object-cover animate-slowzoom lg:aspect-auto lg:h-[min(78svh,760px)] lg:max-h-none" />
         </div>
       </div>
