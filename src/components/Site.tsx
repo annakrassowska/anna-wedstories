@@ -299,7 +299,6 @@ function About({ t }: { t: Dict }) {
         <p className="eyebrow text-taupe">{t.about.eyebrow}</p>
         <h2 className="headline mt-5">{t.about.title}</h2>
         <p className="mt-8 text-lg leading-relaxed">{t.about.p1}</p>
-        <p className="mt-6 text-sm italic text-taupe">{t.about.placeholder}</p>
       </Reveal>
       <Reveal className="order-1 md:order-2 md:col-span-6 md:col-start-7">
         <img src={creator} alt={t.about.alt} width={896} height={1152} loading="lazy" className="aspect-[4/5] w-full object-cover" />

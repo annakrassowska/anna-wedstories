@@ -75,7 +75,6 @@ const en = {
     eyebrow: "About",
     title: "Hi, I'm Anna.",
     p1: "I'm the person behind Anna WedStories, capturing the little moments, real emotions, and beautiful details that make every wedding unique.",
-    placeholder: "[Add Anna's authentic personal story, approach to wedding content creation, and relevant experience here.]",
     alt: "A content creator filming a bride with a smartphone in a sunlit courtyard",
   },
   contact: {
@@ -169,7 +168,6 @@ const es: Dict = {
     eyebrow: "Sobre mí",
     title: "Hola, soy Anna.",
     p1: "Soy la persona detrás de Anna WedStories y capturo los pequeños momentos, las emociones reales y los detalles bonitos que hacen única cada boda.",
-    placeholder: "[Añade aquí la historia personal de Anna, su forma de trabajar y su experiencia.]",
     alt: "Una creadora de contenido grabando a una novia con el móvil en un patio soleado",
   },
   contact: {
@@ -261,7 +259,6 @@ const pl: Dict = {
     eyebrow: "O mnie",
     title: "Cześć, jestem Ania.",
     p1: "To ja stoję za Anna WedStories — uchwytuję drobne chwile, prawdziwe emocje i piękne detale, które sprawiają, że każdy ślub jest wyjątkowy.",
-    placeholder: "[Tutaj dodaj osobistą historię Anny, jej podejście do tworzenia treści ślubnych i doświadczenie.]",
     alt: "Twórczyni treści filmująca pannę młodą smartfonem na słonecznym dziedzińcu",
   },
   contact: {
