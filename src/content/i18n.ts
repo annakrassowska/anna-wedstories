@@ -259,7 +259,7 @@ const pl: Dict = {
   },
   about: {
     eyebrow: "O mnie",
-    title: "Cześć, jestem Anna.",
+    title: "Cześć, jestem Ania.",
     p1: "To ja stoję za Anna WedStories — uchwytuję drobne chwile, prawdziwe emocje i piękne detale, które sprawiają, że każdy ślub jest wyjątkowy.",
     placeholder: "[Tutaj dodaj osobistą historię Anny, jej podejście do tworzenia treści ślubnych i doświadczenie.]",
     alt: "Twórczyni treści filmująca pannę młodą smartfonem na słonecznym dziedzińcu",
