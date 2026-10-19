@@ -62,6 +62,18 @@ const en = {
       "A couple laughing on a terrace above the Mediterranean",
     ],
   },
+  reels: {
+    eyebrow: "Reels",
+    title: "Watch the moments move.",
+    sub: "Short films from real weddings — the glances, the dances, the happy tears.",
+    follow: "Follow @anna_wedstories",
+    watch: "Watch on Instagram",
+    alts: [
+      "A bride and groom kissing under a stone archway lit with magenta light",
+      "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
+      "Guests celebrating at a wedding, captured for a social media reel",
+    ],
+  },
   experience: {
     eyebrow: "The experience",
     title: "Simple, personal, relaxed.",
@@ -155,6 +167,18 @@ const es: Dict = {
       "Una pareja riendo en una terraza sobre el Mediterráneo",
     ],
   },
+  reels: {
+    eyebrow: "Reels",
+    title: "Mira los momentos en movimiento.",
+    sub: "Cortometrajes de bodas reales: las miradas, los bailes, las lágrimas de felicidad.",
+    follow: "Sígueme en @anna_wedstories",
+    watch: "Ver en Instagram",
+    alts: [
+      "Una novia y un novio besándose bajo un arco de piedra con luz magenta",
+      "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
+      "Invitados celebrando una boda, grabados para un reel de redes sociales",
+    ],
+  },
   experience: {
     eyebrow: "La experiencia",
     title: "Sencilla, personal y tranquila.",
@@ -244,6 +268,18 @@ const pl: Dict = {
       "Bukiet ślubny z gałązek oliwnych i kremowych róż",
       "Twórczyni treści filmująca pannę młodą na kamiennym dziedzińcu",
       "Para śmiejąca się na tarasie nad Morzem Śródziemnym",
+    ],
+  },
+  reels: {
+    eyebrow: "Reels",
+    title: "Zobacz, jak te chwile ożywają.",
+    sub: "Krótkie filmy z prawdziwych ślubów — spojrzenia, tańce i łzy szczęścia.",
+    follow: "Obserwuj @anna_wedstories",
+    watch: "Obejrzyj na Instagramie",
+    alts: [
+      "Panna młoda i pan młody całują się pod kamiennym łukiem w magentowym świetle",
+      "Panna młoda w satynowym peniuarze patrzy na swoją suknię wiszącą na starej szafie",
+      "Goście celebrujący wesele, nagrani na reel do mediów społecznościowych",
     ],
   },
   experience: {
