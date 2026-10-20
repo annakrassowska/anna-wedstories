@@ -7,7 +7,7 @@ import { Instagram, Play } from "lucide-react";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
-import creatorAsset from "src/assets/anna-foto.jpg";
+import creatorAsset from "../assets/anna-foto.jpg";
 
 
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
