@@ -8,7 +8,7 @@ import { Instagram, Play } from "lucide-react";
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
 import celebration from "@/assets/celebration.jpg";
-import creator from "@/assets/creator.jpg";
+import creatorAsset from "@/assets/anna_1.jpg.asset.json";
 
 
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
@@ -280,7 +280,7 @@ function About({ t }: { t: Dict }) {
         <p className="mt-8 text-lg leading-relaxed">{t.about.p1}</p>
       </Reveal>
       <Reveal className="order-1 md:order-2 md:col-span-6 md:col-start-7">
-        <img src={creator} alt={t.about.alt} width={896} height={1152} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+        <img src={creatorAsset.url} alt={t.about.alt} width={1060} height={1498} loading="lazy" className="h-auto w-full" />
       </Reveal>
     </section>
   );
