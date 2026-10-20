@@ -9,7 +9,7 @@ const en = {
     description:
       "Wedding content creator in Málaga, Marbella and the Costa del Sol. Natural wedding day content, Instagram Reels and Stories for couples marrying in Spain.",
   },
-  nav: { home: "Home", about: "About", services: "Services", portfolio: "Portfolio", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
+  nav: { home: "Home", about: "About", services: "Services", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
   hero: {
     title: "Wedding content creator in\u00a0Málaga",
     sub: "Relive your wedding day within 24 hours. Candid videos, genuine emotions, and beautiful memories ready to share.",
@@ -43,25 +43,6 @@ const en = {
     ],
   },
 
-  portfolio: {
-    eyebrow: "Selected stories",
-    title: "Moments, as they happened.",
-    note: "Sample imagery — to be replaced with Anna's own work.",
-    cta: "Imagine your day, told your way.",
-    button: "Let's Talk About Your Wedding",
-    open: "Open image",
-    close: "Close viewer",
-    prev: "Previous image",
-    next: "Next image",
-    alts: [
-      "Newlyweds walking out of a white Andalusian chapel under a shower of petals",
-      "A bride's veil lifted by the sea breeze on a Costa del Sol beach",
-      "Guests laughing at a candlelit dinner table in an olive grove",
-      "Bridal bouquet of olive branches and ivory roses",
-      "A content creator filming a bride in a stone courtyard",
-      "A couple laughing on a terrace above the Mediterranean",
-    ],
-  },
   reels: {
     eyebrow: "Reels",
     title: "Watch the moments move.",
@@ -117,7 +98,7 @@ const es: Dict = {
     description:
       "Creadora de contenido para bodas en Málaga, Marbella y la Costa del Sol. Contenido natural del día de tu boda, Reels e Historias de Instagram.",
   },
-  nav: { home: "Inicio", about: "Sobre mí", services: "Servicios", portfolio: "Portfolio", contact: "Contacto", cta: "Consulta tu fecha", menu: "Abrir menú", close: "Cerrar menú", lang: "Idioma" },
+  nav: { home: "Inicio", about: "Sobre mí", services: "Servicios", contact: "Contacto", cta: "Consulta tu fecha", menu: "Abrir menú", close: "Cerrar menú", lang: "Idioma" },
   hero: {
     title: "Wedding content creator en\u00a0Málaga",
     sub: "Revivid vuestra boda en menos de 24 horas. Vídeos espontáneos, emociones reales y recuerdos preciosos listos para compartir.",
@@ -151,22 +132,6 @@ const es: Dict = {
     ],
   },
 
-  portfolio: {
-    eyebrow: "Historias seleccionadas",
-    title: "Momentos, tal como ocurrieron.",
-    note: "Imágenes de muestra — se sustituirán por el trabajo de Anna.",
-    cta: "Imagina tu día, contado a tu manera.",
-    button: "Hablemos de tu boda",
-    open: "Abrir imagen", close: "Cerrar visor", prev: "Imagen anterior", next: "Imagen siguiente",
-    alts: [
-      "Recién casados saliendo de una capilla andaluza blanca bajo una lluvia de pétalos",
-      "El velo de una novia mecido por la brisa en una playa de la Costa del Sol",
-      "Invitados riendo en una cena a la luz de las velas en un olivar",
-      "Ramo de novia de ramas de olivo y rosas marfil",
-      "Una creadora de contenido grabando a una novia en un patio de piedra",
-      "Una pareja riendo en una terraza sobre el Mediterráneo",
-    ],
-  },
   reels: {
     eyebrow: "Reels",
     title: "Mira los momentos en movimiento.",
@@ -220,7 +185,7 @@ const pl: Dict = {
     description:
       "Twórczyni treści ślubnych w Maladze, Marbelli i na Costa del Sol. Naturalne treści z dnia ślubu, Reelsy i Stories na Instagram dla par biorących ślub w Hiszpanii.",
   },
-  nav: { home: "Start", about: "O mnie", services: "Usługi", portfolio: "Portfolio", contact: "Kontakt", cta: "Sprawdź termin", menu: "Otwórz menu", close: "Zamknij menu", lang: "Język" },
+  nav: { home: "Start", about: "O mnie", services: "Usługi", contact: "Kontakt", cta: "Sprawdź termin", menu: "Otwórz menu", close: "Zamknij menu", lang: "Język" },
   hero: {
     title: "Wedding content creator w\u00a0Maladze",
     sub: "Przeżyjcie Wasz dzień ślubu na nowo w ciągu 24 godzin. Niepozowane filmy, prawdziwe emocje i piękne wspomnienia gotowe, by się nimi podzielić.",
@@ -254,22 +219,6 @@ const pl: Dict = {
     ],
   },
 
-  portfolio: {
-    eyebrow: "Wybrane historie",
-    title: "Chwile, takie jakie były.",
-    note: "Przykładowe zdjęcia — zostaną zastąpione pracami Anny.",
-    cta: "Wyobraźcie sobie swój dzień, opowiedziany po Waszemu.",
-    button: "Porozmawiajmy o Waszym ślubie",
-    open: "Otwórz zdjęcie", close: "Zamknij podgląd", prev: "Poprzednie zdjęcie", next: "Następne zdjęcie",
-    alts: [
-      "Nowożeńcy wychodzący z białej andaluzyjskiej kaplicy w deszczu płatków",
-      "Welon panny młodej unoszony przez morską bryzę na plaży Costa del Sol",
-      "Goście śmiejący się przy kolacji przy świecach w gaju oliwnym",
-      "Bukiet ślubny z gałązek oliwnych i kremowych róż",
-      "Twórczyni treści filmująca pannę młodą na kamiennym dziedzińcu",
-      "Para śmiejąca się na tarasie nad Morzem Śródziemnym",
-    ],
-  },
   reels: {
     eyebrow: "Reels",
     title: "Zobacz, jak te chwile ożywają.",
