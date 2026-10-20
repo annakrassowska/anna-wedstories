@@ -85,7 +85,6 @@ const en = {
     errors: { required: "This field is required.", email: "Please enter a valid email address.", services: "Please choose at least one service.", consent: "Please accept to continue." },
     langs: { en: "English", es: "Spanish", pl: "Polish" },
   },
-  final: { title: "Your day deserves to be remembered exactly as it felt.", sub: "Let's create something beautiful together.", cta: "Check Your Date" },
   whatsapp: { label: "Chat on WhatsApp", msg: "Hi Anna! I'm planning my wedding in Spain and would love to know more about your wedding content services." },
   footer: { location: "Málaga, Spain", privacy: "Privacy Policy", cookies: "Cookie Policy", rights: "All rights reserved.", nav: "Footer navigation" },
 };
@@ -174,7 +173,6 @@ const es: Dict = {
     errors: { required: "Este campo es obligatorio.", email: "Introduce un correo electrónico válido.", services: "Elige al menos un servicio.", consent: "Debes aceptar para continuar." },
     langs: { en: "Inglés", es: "Español", pl: "Polaco" },
   },
-  final: { title: "Tu día merece ser recordado tal como lo sentiste.", sub: "Creemos juntos algo bonito.", cta: "Consulta tu fecha" },
   whatsapp: { label: "Escríbeme por WhatsApp", msg: "¡Hola Anna! Estoy organizando mi boda en España y me encantaría saber más sobre tus servicios de contenido para bodas." },
   footer: { location: "Málaga, España", privacy: "Política de privacidad", cookies: "Política de cookies", rights: "Todos los derechos reservados.", nav: "Navegación del pie de página" },
 };
@@ -261,7 +259,6 @@ const pl: Dict = {
     errors: { required: "To pole jest wymagane.", email: "Podaj prawidłowy adres e-mail.", services: "Wybierz co najmniej jedną usługę.", consent: "Zaznacz zgodę, aby kontynuować." },
     langs: { en: "Angielski", es: "Hiszpański", pl: "Polski" },
   },
-  final: { title: "Wasz dzień zasługuje na to, by pamiętać go dokładnie takim, jaki był.", sub: "Stwórzmy razem coś pięknego.", cta: "Sprawdź termin" },
   whatsapp: { label: "Napisz na WhatsApp", msg: "Cześć Anna! Planuję ślub w Hiszpanii i chętnie dowiem się więcej o Twoich usługach tworzenia treści ślubnych." },
   footer: { location: "Malaga, Hiszpania", privacy: "Polityka prywatności", cookies: "Polityka cookies", rights: "Wszelkie prawa zastrzeżone.", nav: "Nawigacja w stopce" },
 };

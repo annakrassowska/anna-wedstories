@@ -7,7 +7,6 @@ import { Instagram, Play } from "lucide-react";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
 import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
-import celebration from "@/assets/celebration.jpg";
 import creatorAsset from "@/assets/anna_1.jpg.asset.json";
 
 
@@ -47,7 +46,6 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
         <Experience t={t} />
         <About t={t} />
         <Contact t={t} wa={wa} />
-        <Final t={t} />
         </>}
       </main>
       <Footer t={t} wa={wa} lang={lang} />
@@ -301,20 +299,6 @@ function Contact({ t, wa }: { t: Dict; wa: string | null }) {
         <p className="mt-10 text-xs text-muted-foreground">
           <Link to="/privacy" className="underline">{t.footer.privacy}</Link>
         </p>
-      </Reveal>
-    </section>
-  );
-}
-
-function Final({ t }: { t: Dict }) {
-  return (
-    <section className="relative overflow-hidden py-32 text-center text-ivory md:py-48">
-      <img src={celebration} alt="" width={1280} height={896} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-overlay" />
-      <Reveal className="relative mx-auto max-w-3xl px-5">
-        <h2 className="headline">{t.final.title}</h2>
-        <p className="mt-6 text-lg opacity-90">{t.final.sub}</p>
-        <a href="#contact" className="btn btn-light mt-10">{t.final.cta}</a>
       </Reveal>
     </section>
   );
