@@ -11,7 +11,7 @@
 import { INSTAGRAM_URL } from "@/content/site";
 import kissCover from "@/assets/IMG_2489.jpg.asset.json";
 import dressCover from "@/assets/IMG_2329_still.jpg.asset.json";
-import celebrationCover from "@/assets/celebration.jpg";
+import embraceCover from "@/assets/IMG_2370_still.jpg.asset.json";
 
 export type Reel = {
   id: string;
@@ -24,5 +24,5 @@ export type Reel = {
 export const REELS: Reel[] = [
   { id: "archway-kiss", url: INSTAGRAM_URL, thumb: kissCover.url },
   { id: "dress-reveal", url: INSTAGRAM_URL, thumb: dressCover.url },
-  { id: "celebration", url: INSTAGRAM_URL, thumb: celebrationCover },
+  { id: "bride-and-guest", url: INSTAGRAM_URL, thumb: embraceCover.url },
 ];
