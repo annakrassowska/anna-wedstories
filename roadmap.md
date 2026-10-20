@@ -7,4 +7,5 @@
 - [x] Remove the leftover intro placeholder paragraph in all three languages.
 - [x] Use Anna's uploaded photograph (IMG_2489.jpg) as the banner photo, with matching alt text in all three languages.
 - [x] Replace the intro photo with Anna's uploaded photo (IMG_2329_still.jpg) without ugly cropping.
-- [ ] Add Instagram link https://www.instagram.com/anna_wedstories and a section that can host reels.
+- [x] Add Instagram link https://www.instagram.com/anna_wedstories and a section that can host reels.
+- [x] Remove the portfolio (sample gallery) section and its navigation links in all three languages.
