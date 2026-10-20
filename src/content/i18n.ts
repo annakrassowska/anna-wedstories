@@ -52,7 +52,7 @@ const en = {
     alts: [
       "A bride and groom kissing under a stone archway lit with magenta light",
       "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
-      "Guests celebrating at a wedding, captured for a social media reel",
+      "A bride in an ivory gown embracing a guest in a red dress in front of a teal wall",
     ],
   },
   experience: {
@@ -141,7 +141,7 @@ const es: Dict = {
     alts: [
       "Una novia y un novio besándose bajo un arco de piedra con luz magenta",
       "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
-      "Invitados celebrando una boda, grabados para un reel de redes sociales",
+      "Una novia en vestido marfil abrazando a una invitada de vestido rojo frente a una pared verde azulado",
     ],
   },
   experience: {
@@ -228,7 +228,7 @@ const pl: Dict = {
     alts: [
       "Panna młoda i pan młody całują się pod kamiennym łukiem w magentowym świetle",
       "Panna młoda w satynowym peniuarze patrzy na swoją suknię wiszącą na starej szafie",
-      "Goście celebrujący wesele, nagrani na reel do mediów społecznościowych",
+      "Panna młoda w kremowej sukni obejmuje kobietę w czerwonej sukni na tle turkusowej ściany",
     ],
   },
   experience: {
