@@ -5,23 +5,11 @@ import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 import { REELS } from "@/content/reels";
 import { Instagram, Play } from "lucide-react";
 // Placeholder imagery — replace with Anna's own photographs (keep the same filenames or update imports).
-import hero from "@/assets/hero.jpg";
 import heroVerticalAsset from "@/assets/IMG_2489.jpg.asset.json";
-import detail from "@/assets/detail.jpg";
 import detailAsset from "@/assets/IMG_2329_still.jpg.asset.json";
 import celebration from "@/assets/celebration.jpg";
 import creator from "@/assets/creator.jpg";
-import veil from "@/assets/veil.jpg";
-import petals from "@/assets/petals.jpg";
 
-const GALLERY = [
-  { src: petals, w: 1280, h: 896, span: "md:col-span-7" },
-  { src: veil, w: 896, h: 1152, span: "md:col-span-5 md:mt-24" },
-  { src: celebration, w: 1280, h: 896, span: "md:col-span-6" },
-  { src: detail, w: 896, h: 1152, span: "md:col-span-3 md:-mt-16" },
-  { src: creator, w: 896, h: 1152, span: "md:col-span-3 md:mt-12" },
-  { src: hero, w: 1920, h: 1152, span: "md:col-span-12" },
-];
 
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -55,7 +43,6 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
         <Hero t={t} />
         <Intro t={t} />
         <Services t={t} />
-        <Portfolio t={t} />
         <Reels t={t} />
         <Experience t={t} />
         <About t={t} />
@@ -88,7 +75,7 @@ function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packag
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
   }, [open]);
-  const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["portfolio", "#portfolio"], ["contact", "#contact"]] as const;
+  const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["contact", "#contact"]] as const;
   const solid = scrolled || open || page === "packages";
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid ? "bg-background/95 text-foreground backdrop-blur border-b" : "text-ivory"}`}>
@@ -144,7 +131,7 @@ function Hero({ t }: { t: Dict }) {
           <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{t.hero.sub}</p>
           <div className="mt-10 flex flex-wrap gap-3 animate-rise [animation-delay:450ms]">
             <a href="#contact" className="btn btn-light">{t.hero.cta}</a>
-            <a href="#portfolio" className="btn btn-outline-light">{t.hero.cta2}</a>
+            <a href="#reels" className="btn btn-outline-light">{t.hero.cta2}</a>
           </div>
         </div>
         <div className="order-1 w-full max-w-[280px] justify-self-center overflow-hidden sm:max-w-[380px] lg:order-2 lg:max-w-[520px] lg:justify-self-end">
@@ -221,56 +208,6 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
   );
 }
 
-function Portfolio({ t }: { t: Dict }) {
-  const [idx, setIdx] = useState<number | null>(null);
-  const n = GALLERY.length;
-  const touch = useRef(0);
-  useEffect(() => {
-    if (idx === null) return;
-    const k = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIdx(null);
-      if (e.key === "ArrowRight") setIdx((i) => (i! + 1) % n);
-      if (e.key === "ArrowLeft") setIdx((i) => (i! - 1 + n) % n);
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", k);
-    return () => { window.removeEventListener("keydown", k); document.body.style.overflow = ""; };
-  }, [idx, n]);
-  return (
-    <section id="portfolio" className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-40">
-      <Reveal>
-        <p className="eyebrow text-taupe">{t.portfolio.eyebrow}</p>
-        <h2 className="headline mt-5">{t.portfolio.title}</h2>
-        <p className="mt-3 text-xs text-muted-foreground">{t.portfolio.note}</p>
-      </Reveal>
-      <div className="mt-16 grid grid-cols-1 gap-5 md:grid-cols-12 md:gap-8">
-        {GALLERY.map((g, i) => (
-          <Reveal key={i} className={g.span}>
-            <button onClick={() => setIdx(i)} aria-label={`${t.portfolio.open}: ${t.portfolio.alts[i]}`} className="group block w-full overflow-hidden">
-              <img src={g.src} alt={t.portfolio.alts[i]} width={g.w} height={g.h} loading="lazy"
-                className="w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]" />
-            </button>
-          </Reveal>
-        ))}
-      </div>
-      <Reveal className="mt-24 flex flex-col items-center text-center">
-        <p className="font-serif text-3xl italic md:text-4xl">{t.portfolio.cta}</p>
-        <a href="#contact" className="btn btn-ghost mt-8">{t.portfolio.button}</a>
-      </Reveal>
-      {idx !== null && (
-        <div role="dialog" aria-modal="true" aria-label={t.portfolio.alts[idx]} className="fixed inset-0 z-[70] flex items-center justify-center bg-foreground/95 p-4 animate-rise"
-          onClick={() => setIdx(null)}
-          onTouchStart={(e) => (touch.current = (e.touches[0]?.clientX ?? 0))}
-          onTouchEnd={(e) => { const d = (e.changedTouches[0]?.clientX ?? 0) - touch.current; if (Math.abs(d) > 50) setIdx((i) => (i! + (d < 0 ? 1 : -1) + n) % n); }}>
-          <img src={GALLERY[idx]?.src} alt={t.portfolio.alts[idx]} className="max-h-[85vh] max-w-full object-contain" onClick={(e) => e.stopPropagation()} />
-          <button autoFocus onClick={() => setIdx(null)} aria-label={t.portfolio.close} className="absolute right-4 top-4 p-3 eyebrow text-ivory">✕</button>
-          <button onClick={(e) => { e.stopPropagation(); setIdx((idx - 1 + n) % n); }} aria-label={t.portfolio.prev} className="absolute left-2 top-1/2 -translate-y-1/2 p-4 text-3xl text-ivory">‹</button>
-          <button onClick={(e) => { e.stopPropagation(); setIdx((idx + 1) % n); }} aria-label={t.portfolio.next} className="absolute right-2 top-1/2 -translate-y-1/2 p-4 text-3xl text-ivory">›</button>
-        </div>
-      )}
-    </section>
-  );
-}
 
 function Reels({ t }: { t: Dict }) {
   const r = t.reels;
@@ -384,7 +321,7 @@ function Final({ t }: { t: Dict }) {
 }
 
 function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
-  const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["portfolio", "#portfolio"], ["contact", "#contact"]] as const;
+  const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["contact", "#contact"]] as const;
   return (
     <footer className="mx-auto max-w-[1400px] px-5 py-16 md:px-10">
       <div className="flex flex-col justify-between gap-10 md:flex-row">
