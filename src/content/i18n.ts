@@ -68,7 +68,7 @@ const en = {
     eyebrow: "About",
     title: "Hi, I'm Anna.",
     p1: "I'm the person behind Anna WedStories, capturing the little moments, real emotions, and beautiful details that make every wedding unique.",
-    alt: "A bride and groom kissing under a stone archway lit with warm and magenta light",
+    alt: "Anna filming a wedding with her phone, standing beside white roses and palm trees wrapped in fairy lights",
   },
   contact: {
     eyebrow: "Contact",
@@ -157,7 +157,7 @@ const es: Dict = {
     eyebrow: "Sobre mí",
     title: "Hola, soy Anna.",
     p1: "Soy la persona detrás de Anna WedStories y capturo los pequeños momentos, las emociones reales y los detalles bonitos que hacen única cada boda.",
-    alt: "Una novia y un novio besándose bajo un arco de piedra con luz cálida y magenta",
+    alt: "Anna graba una boda con su teléfono, de pie junto a rosas blancas y palmeras envueltas en lucecitas",
   },
   contact: {
     eyebrow: "Contacto",
@@ -244,7 +244,7 @@ const pl: Dict = {
     eyebrow: "O mnie",
     title: "Cześć, jestem Ania.",
     p1: "To ja stoję za Anna WedStories — uchwytuję drobne chwile, prawdziwe emocje i piękne detale, które sprawiają, że każdy ślub jest wyjątkowy.",
-    alt: "Panna młoda i pan młody całują się pod kamiennym łukiem w ciepłym i magentowym świetle",
+    alt: "Anna nagrywa wesele telefonem, stojąc wśród białych róż i palm oplecionych lampkami",
   },
   contact: {
     eyebrow: "Kontakt",
