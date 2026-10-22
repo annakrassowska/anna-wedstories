@@ -10,8 +10,8 @@
 
 import { INSTAGRAM_URL } from "@/content/site";
 import kissCover from "@/assets/IMG_2489.jpg.asset.json";
-import dressCover from "@/assets/IMG_2329_still.jpg.asset.json";
-import embraceCover from "@/assets/IMG_2370_still.jpg.asset.json";
+import dressCover from "@/assets/IMG_2329.jpg.asset.json";
+import embraceCover from "@/assets/IMG_2370.jpg.asset.json";
 
 export type Reel = {
   id: string;
