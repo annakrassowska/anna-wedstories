@@ -186,24 +186,69 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
   const p = t.packages;
   return (
     <section id="packages" className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-36">
-      <Reveal>
+      <Reveal className="max-w-2xl">
         <p className="eyebrow text-taupe">{p.eyebrow}</p>
         <h1 className="headline mt-5">{p.title}</h1>
+        <p className="mt-8 font-serif text-3xl leading-snug md:text-4xl">{p.lead}</p>
+        <p className="mt-6 leading-relaxed text-muted-foreground">{p.intro}</p>
       </Reveal>
-      <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
+
+      <div className="mt-16 grid gap-6 md:grid-cols-2 md:gap-8">
         {p.items.map((item, i) => (
           <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-[10px]" : "flex flex-col border p-[10px]"}>
             <span className="eyebrow text-taupe">0{i + 1}</span>
-            <h3 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h3>
-            <p className="mt-6 border-b pb-6 font-serif text-3xl">{item.hours}</p>
-            <ul className="mt-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
-              {item.features.map((f) => <li key={f}>{f}</li>)}
+            <h2 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h2>
+            <p className="mt-6 flex flex-wrap items-baseline justify-between gap-x-6 border-b pb-6 font-serif text-3xl">
+              <span>{item.hours}</span>
+              <span>{item.price}</span>
+            </p>
+            <p className="mt-6 leading-relaxed text-muted-foreground">{item.tagline}</p>
+            <p className="eyebrow mt-8 text-taupe">{p.coverageLabel}</p>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed">
+              {item.coverage.map((c) => <li key={c}>{c}</li>)}
             </ul>
-            <p className="mt-8 font-serif text-2xl">{item.price}</p>
+            <p className="eyebrow mt-8 text-taupe">{p.includedLabel}</p>
+            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+              {item.included.map((f) => <li key={f}>{f}</li>)}
+            </ul>
             <Link to={langPath(lang)} hash="contact" className="btn btn-ghost mt-8 self-start">{t.nav.cta}</Link>
           </Reveal>
         ))}
       </div>
+
+      <div className="mt-16 grid gap-10 md:grid-cols-2 md:gap-16">
+        <Reveal>
+          <h2 className="font-serif text-3xl">{p.addOns.title}</h2>
+          <p className="mt-4 leading-relaxed text-muted-foreground">{p.addOns.sub}</p>
+          <ul className="mt-8 border-t">
+            {p.addOns.items.map((a) => (
+              <li key={a.name} className="border-b py-5">
+                <p className="flex flex-wrap items-baseline justify-between gap-x-6">
+                  <span className="font-serif text-xl">{a.name}</span>
+                  <span className="font-serif text-xl">{a.price}</span>
+                </p>
+                {a.d && <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">{a.d}</p>}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+        <Reveal>
+          <h2 className="font-serif text-3xl">{p.travel.title}</h2>
+          <ul className="mt-8 border-t">
+            {p.travel.items.map((tr) => (
+              <li key={tr.place} className="flex flex-wrap items-baseline justify-between gap-x-6 border-b py-5">
+                <span className="font-serif text-xl">{tr.place}</span>
+                <span className="text-sm text-taupe">{tr.fee}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </div>
+
+      <Reveal className="mt-16 border-t pt-10">
+        <p className="max-w-2xl font-serif text-2xl italic leading-snug">{p.note}</p>
+        <Link to={langPath(lang)} hash="contact" className="btn btn-solid mt-8 inline-flex">{t.nav.cta}</Link>
+      </Reveal>
     </section>
   );
 }

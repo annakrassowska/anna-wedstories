@@ -5,7 +5,7 @@ export function langHead(lang: Lang, page: "home" | "packages" = "home") {
   const path = page === "packages" ? packagePath : langPath;
   const m = page === "packages" ? {
     title: `${dict[lang].packages.eyebrow} — Anna WedStories`,
-    description: `${dict[lang].packages.title} Essential, Premium, Exclusive. ${dict[lang].packages.items.map((item) => `${item.name}: ${item.price}`).join(". ")}`,
+    description: `${dict[lang].packages.lead} ${dict[lang].packages.items.map((item) => `${item.name}: ${item.hours}, ${item.price}`).join(". ")}`,
   } : dict[lang].meta;
   const locale = { en: "en_GB", es: "es_ES", pl: "pl_PL" }[lang];
   return {

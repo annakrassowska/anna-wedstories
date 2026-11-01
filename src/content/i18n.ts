@@ -35,12 +35,46 @@ const en = {
   },
   packages: {
     eyebrow: "Packages",
-    title: "A package for every story.",
+    title: "Wedding Content Packages",
+    lead: "Your wedding day, captured as it happens.",
+    intro: "Real moments, genuine emotions and all the little details that make your day yours. I capture your wedding through a mix of natural photos and videos, creating memories you can relive and share just 24 hours after your celebration.",
+    coverageLabel: "Coverage includes",
+    includedLabel: "What's included",
     items: [
-      { name: "ESSENTIAL", hours: "4 hours of coverage", features: ["1 one-minute highlight video", "1 reel for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €290 + IVA (VAT)" },
-      { name: "PREMIUM", hours: "6 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €350 + IVA (VAT)" },
-      { name: "EXCLUSIVE", hours: "9 hours of coverage", features: ["1 one-minute highlight video", "2 reels for social media", "Online pre-wedding meeting (optional)", "Hours to choose by the couple"], price: "from €450 + IVA (VAT)" },
+      {
+        name: "BASIC",
+        hours: "4 Hours",
+        price: "€290 + IVA (VAT)",
+        tagline: "Perfect for capturing the most meaningful moments of your wedding day.",
+        coverage: ["Getting ready", "Wedding ceremony", "Couple portraits"],
+        included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "2 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
+      },
+      {
+        name: "THE COMPLETE STORY",
+        hours: "Up to 12 Hours",
+        price: "€490 + IVA (VAT)",
+        tagline: "From the excitement of getting ready to the last moments on the dance floor. Your entire wedding story, captured from beginning to end.",
+        coverage: ["Getting ready", "Wedding ceremony", "Couple portraits", "Cocktail hour", "Dinner", "Party"],
+        included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "3 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
+      },
     ],
+    addOns: {
+      title: "Add-ons",
+      sub: "Make your package even more complete with these additional options:",
+      items: [
+        { name: "Extra hour", price: "€50 + IVA (VAT)", d: "" },
+        { name: "Static wedding video", price: "€100 + IVA (VAT)", d: "A full, unedited recording of your chosen moment, captured with a stationary camera." },
+      ],
+    },
+    travel: {
+      title: "Travel fees",
+      items: [
+        { place: "Málaga & surrounding areas (up to 15 km)", fee: "FREE" },
+        { place: "Marbella", fee: "€50 travel fee" },
+        { place: "Other locations", fee: "Travel fee upon request, depending on the distance." },
+      ],
+    },
+    note: "Not sure which package is right for you? Let's chat and find the perfect way to capture your wedding day!",
   },
 
   reels: {
@@ -123,12 +157,46 @@ const es: Dict = {
   },
   packages: {
     eyebrow: "Paquetes",
-    title: "Un paquete para cada historia.",
+    title: "Paquetes de contenido para bodas",
+    lead: "Vuestro día de boda, capturado tal y como sucede.",
+    intro: "Momentos reales, emociones verdaderas y todos esos pequeños detalles que hacen que vuestro día sea vuestro. Os grabo a través de una mezcla de fotos y vídeos espontáneos, creando recuerdos que podréis revivir y compartir apenas 24 horas después de la celebración.",
+    coverageLabel: "La cobertura incluye",
+    includedLabel: "Qué incluye",
     items: [
-      { name: "ESSENTIAL", hours: "4 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "1 reel para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 290 € + IVA (VAT)" },
-      { name: "PREMIUM", hours: "6 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 350 € + IVA (VAT)" },
-      { name: "EXCLUSIVE", hours: "9 horas de cobertura", features: ["1 vídeo resumen de 1 minuto", "2 reels para redes sociales", "Reunión preboda online (opcional)", "Horario a elegir por los novios"], price: "desde 450 € + IVA (VAT)" },
+      {
+        name: "BASIC",
+        hours: "4 horas",
+        price: "290 € + IVA (VAT)",
+        tagline: "Perfecto para capturar los momentos más importantes de vuestro día de boda.",
+        coverage: ["Preparativos", "Ceremonia", "Retrato de los novios"],
+        included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "2 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
+      },
+      {
+        name: "THE COMPLETE STORY",
+        hours: "Hasta 12 horas",
+        price: "490 € + IVA (VAT)",
+        tagline: "Desde la ilusión de los preparativos hasta los últimos momentos en la pista de baile. Toda la historia de vuestra boda, capturada de principio a fin.",
+        coverage: ["Preparativos", "Ceremonia", "Retrato de los novios", "Cóctel", "Cena", "Fiesta"],
+        included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "3 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
+      },
     ],
+    addOns: {
+      title: "Extras",
+      sub: "Completad vuestro paquete con estas opciones adicionales:",
+      items: [
+        { name: "Hora extra", price: "50 € + IVA (VAT)", d: "" },
+        { name: "Vídeo de boda estático", price: "100 € + IVA (VAT)", d: "Una grabación completa y sin editar del momento que elijáis, capturada con una cámara fija." },
+      ],
+    },
+    travel: {
+      title: "Desplazamientos",
+      items: [
+        { place: "Málaga y alrededores (hasta 15 km)", fee: "GRATIS" },
+        { place: "Marbella", fee: "50 € de desplazamiento" },
+        { place: "Otras localidades", fee: "Desplazamiento a consultar según la distancia." },
+      ],
+    },
+    note: "¿No sabéis qué paquete encaja mejor con vosotros? ¡Hablemos y encontremos la mejor forma de capturar vuestra boda!",
   },
 
   reels: {
@@ -209,12 +277,46 @@ const pl: Dict = {
   },
   packages: {
     eyebrow: "Pakiety",
-    title: "Pakiet dla każdej historii.",
+    title: "Pakiety treści ślubnych",
+    lead: "Wasz dzień ślubu uchwycony dokładnie tak, jak się wydarza.",
+    intro: "Prawdziwe chwile, autentyczne emocje i wszystkie drobne detale, które sprawiają, że ten dzień jest Wasz. Tworzę mieszankę naturalnych zdjęć i filmów, dzięki której będziecie mogli przeżywać i dzielić się swoimi wspomniami już 24 godziny po weselu.",
+    coverageLabel: "Relacja obejmuje",
+    includedLabel: "Co zawiera pakiet",
     items: [
-      { name: "ESSENTIAL", hours: "4 godziny relacji", features: ["1 film podsumowujący (1 minuta)", "1 reel na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 290 € + IVA (VAT)" },
-      { name: "PREMIUM", hours: "6 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 350 € + IVA (VAT)" },
-      { name: "EXCLUSIVE", hours: "9 godzin relacji", features: ["1 film podsumowujący (1 minuta)", "2 reele na media społecznościowe", "Spotkanie online przed ślubem (opcjonalnie)", "Harmonogram wybierany przez parę młodzią"], price: "od 450 € + IVA (VAT)" },
+      {
+        name: "BASIC",
+        hours: "4 godziny",
+        price: "290 € + IVA (VAT)",
+        tagline: "Idealny, by uchwycić najważniejsze chwile Waszego dnia ślubu.",
+        coverage: ["Przygotowania", "Ceremonia ślubna", "Portrety pary młodej"],
+        included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "2 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],
+      },
+      {
+        name: "THE COMPLETE STORY",
+        hours: "Do 12 godzin",
+        price: "490 € + IVA (VAT)",
+        tagline: "Od radości podczas przygotowań po ostatnie chwile na parkiecie. Cała historia Waszego ślubu, od początku do końca.",
+        coverage: ["Przygotowania", "Ceremonia ślubna", "Portrety pary młodej", "Przyjęcie cocktailowe", "Obiad", "Zabawa weselna"],
+        included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "3 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],
+      },
     ],
+    addOns: {
+      title: "Dodatki",
+      sub: "Uzupełnijcie swój pakiet o dodatkowe opcje:",
+      items: [
+        { name: "Dodatkowa godzina", price: "50 € + IVA (VAT)", d: "" },
+        { name: "Statyczne wideo ślubne", price: "100 € + IVA (VAT)", d: "Pełny, nieedytowany zapis wybranego momentu, nagrany stacjonarną kamerą." },
+      ],
+    },
+    travel: {
+      title: "Dojazd",
+      items: [
+        { place: "Malaga i okolice (do 15 km)", fee: "BEZPŁATNIE" },
+        { place: "Marbella", fee: "50 € za dojazd" },
+        { place: "Inne lokalizacje", fee: "Koszt dojazdu do ustalenia, w zależności od odległości." },
+      ],
+    },
+    note: "Nie wiecie, który pakiet będzie najlepszy? Porozmawiajmy i znajdźmy idealny sposób na uchwycenie Waszego ślubu!",
   },
 
   reels: {
