@@ -9,9 +9,9 @@
 // Add or remove entries freely — the section adapts to however many you list.
 
 import { INSTAGRAM_URL } from "@/content/site";
-import kissCover from "@/assets/IMG_2489.jpg.asset.json";
-import dressCover from "@/assets/IMG_2329.jpg.asset.json";
-import embraceCover from "@/assets/IMG_2370.jpg.asset.json";
+import kissCover from "@/assets/IMG_2489.jpg";
+import dressCover from "@/assets/IMG_2329.jpg";
+import embraceCover from "@/assets/IMG_2370.jpg";
 
 export type Reel = {
   id: string;
@@ -22,7 +22,7 @@ export type Reel = {
 };
 
 export const REELS: Reel[] = [
-  { id: "archway-kiss", url: INSTAGRAM_URL, thumb: kissCover.url },
-  { id: "dress-reveal", url: INSTAGRAM_URL, thumb: dressCover.url },
-  { id: "bride-and-guest", url: INSTAGRAM_URL, thumb: embraceCover.url },
+  { id: "archway-kiss", url: INSTAGRAM_URL, thumb: kissCover },
+  { id: "dress-reveal", url: INSTAGRAM_URL, thumb: dressCover },
+  { id: "bride-and-guest", url: INSTAGRAM_URL, thumb: embraceCover },
 ];
