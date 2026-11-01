@@ -25,8 +25,8 @@ describe.each(LANGS)("Packages page (%s)", (lang) => {
   it("lists the coverage moments and the included deliverables", () => {
     expect(p.items[0].coverage).toHaveLength(3);
     expect(p.items[1].coverage).toHaveLength(6);
-    expect(p.items[0].included.join(" ")).toContain("2 Instagram");
-    expect(p.items[1].included.join(" ")).toContain("3 Instagram");
+    expect(p.items[0].included.some((f) => /^2\b.*reel/i.test(f))).toBe(true);
+    expect(p.items[1].included.some((f) => /^3\b.*reel/i.test(f))).toBe(true);
   });
 
   it("sells the extra hour at €50 and the static video at €100", () => {
