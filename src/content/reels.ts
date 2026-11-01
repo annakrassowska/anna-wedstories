@@ -22,7 +22,7 @@ export type Reel = {
 };
 
 export const REELS: Reel[] = [
-  { id: "archway-kiss", url: INSTAGRAM_URL, thumb: kissCover.url },
-  { id: "dress-reveal", url: INSTAGRAM_URL, thumb: dressCover.url },
-  { id: "bride-and-guest", url: INSTAGRAM_URL, thumb: embraceCover.url },
+  { id: "archway-kiss", url: INSTAGRAM_URL, thumb: kissCover },
+  { id: "dress-reveal", url: INSTAGRAM_URL, thumb: dressCover },
+  { id: "bride-and-guest", url: INSTAGRAM_URL, thumb: embraceCover },
 ];

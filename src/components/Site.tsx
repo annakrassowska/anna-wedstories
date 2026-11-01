@@ -135,7 +135,7 @@ function Hero({ t }: { t: Dict }) {
           </div>
         </div>
         <div className="order-1 w-full max-w-[280px] justify-self-center overflow-hidden sm:max-w-[380px] lg:order-2 lg:max-w-[520px] lg:justify-self-end">
-          <img src={heroVerticalAsset.url} alt={t.hero.alt} width={1080} height={1920} fetchPriority="high"
+          <img src={heroVerticalAsset} alt={t.hero.alt} width={1200} height={2133} fetchPriority="high"
             className="aspect-[3/4] max-h-[44svh] w-full object-cover animate-slowzoom lg:aspect-auto lg:h-[min(78svh,760px)] lg:max-h-none" />
         </div>
       </div>
@@ -147,7 +147,7 @@ function Intro({ t }: { t: Dict }) {
   return (
     <section className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-40">
       <Reveal className="md:col-span-5 md:col-start-1">
-        <img src={detailAsset.url} alt={t.intro.alt} width={1081} height={1920} loading="lazy" className="h-auto w-full" />
+        <img src={detailAsset} alt={t.intro.alt} width={1000} height={1776} loading="lazy" className="h-auto w-full" />
       </Reveal>
       <Reveal className="flex flex-col justify-center md:col-span-6 md:col-start-7">
         <p className="eyebrow text-taupe">{t.intro.eyebrow}</p>
@@ -280,7 +280,7 @@ function About({ t }: { t: Dict }) {
         <p className="mt-8 text-lg leading-relaxed">{t.about.p1}</p>
       </Reveal>
       <Reveal className="order-1 md:order-2 md:col-span-6 md:col-start-7">
-        <img src={creatorAsset.url} alt={t.about.alt} width={1060} height={1498} loading="lazy" className="h-auto w-full" />
+        <img src={creatorAsset} alt={t.about.alt} width={1060} height={1498} loading="lazy" className="h-auto w-full" />
       </Reveal>
     </section>
   );
