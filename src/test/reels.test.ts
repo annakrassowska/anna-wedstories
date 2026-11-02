@@ -17,6 +17,17 @@ describe("Instagram and reels", () => {
     }
   });
 
+  it("each reel card opens its own Instagram post, not the profile", () => {
+    const urls = REELS.map((r) => r.url);
+    expect(urls).toEqual([
+      "https://www.instagram.com/p/DeWUu4wuOKH/",
+      "https://www.instagram.com/p/DfDIfDPOEup/",
+      "https://www.instagram.com/p/DeMuWWNstIo/",
+    ]);
+    expect(new Set(urls).size).toBe(REELS.length);
+    for (const url of urls) expect(url).not.toBe(INSTAGRAM_URL);
+  });
+
   it("describes every reel cover in all three languages", () => {
     for (const lang of ["en", "es", "pl"] as const) {
       expect(dict[lang].reels.alts).toHaveLength(REELS.length);

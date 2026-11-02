@@ -8,7 +8,6 @@
 //   3. Put a vertical cover photo in src/assets and use it as `thumb`.
 // Add or remove entries freely — the section adapts to however many you list.
 
-import { INSTAGRAM_URL } from "@/content/site";
 import kissCover from "@/assets/IMG_2489.jpg";
 import dressCover from "@/assets/IMG_2329.jpg";
 import embraceCover from "@/assets/IMG_2370.jpg";
