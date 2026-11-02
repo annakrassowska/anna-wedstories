@@ -10,18 +10,18 @@ const num = (s: string) => Number(s.match(/\d+/)?.[0]);
 describe.each(LANGS)("Packages page (%s)", (lang) => {
   const p = dict[lang].packages;
   const [basic, complete] = p.items as [Item, Item];
-  const [extraHour, staticVideo] = p.addOns.items as [AddOn, AddOn];
+  const [extraHour, weddingVideo] = p.addOns.items as [AddOn, AddOn];
   const [nearby, marbella, other] = p.travel.items as [Fee, Fee, Fee];
 
   it("offers exactly two packages: Basic and The Complete Story", () => {
     expect(p.items.map((i) => i.name)).toEqual(["BASIC", "THE COMPLETE STORY"]);
   });
 
-  it("charges €290 for Basic and €490 for The Complete Story, before VAT", () => {
+  it("charges €290 for Basic and €490 for The Complete Story, with no VAT note", () => {
     expect(num(basic.price)).toBe(290);
     expect(num(complete.price)).toBe(490);
-    expect(basic.price).toContain("IVA");
-    expect(complete.price).toContain("IVA");
+    expect(basic.price).not.toMatch(/IVA|VAT/);
+    expect(complete.price).not.toMatch(/IVA|VAT/);
   });
 
   it("covers 4 hours with Basic and up to 12 hours with The Complete Story", () => {
@@ -32,15 +32,18 @@ describe.each(LANGS)("Packages page (%s)", (lang) => {
   it("lists the coverage moments and the included deliverables", () => {
     expect(basic.coverage).toHaveLength(3);
     expect(complete.coverage).toHaveLength(6);
+    expect(basic.coverage[0]).toMatch(/1\s*(hour|hora|godzin)/i);
     expect(basic.included.some((f) => /^2\b.*reel/i.test(f))).toBe(true);
     expect(complete.included.some((f) => /^3\b.*reel/i.test(f))).toBe(true);
   });
 
-  it("sells the extra hour at €50 and the static video at €100", () => {
+  it("sells the extra hour at €50 and the ceremony video at €100", () => {
     expect(num(extraHour.price)).toBe(50);
-    expect(num(staticVideo.price)).toBe(100);
-    expect(extraHour.price).toContain("IVA");
-    expect(staticVideo.price).toContain("IVA");
+    expect(num(weddingVideo.price)).toBe(100);
+    expect(extraHour.price).not.toMatch(/IVA|VAT/);
+    expect(weddingVideo.price).not.toMatch(/IVA|VAT/);
+    expect(weddingVideo.name).toMatch(/wedding video|vídeo de boda|wideo ślubne/i);
+    expect(weddingVideo.d).toMatch(/ceremony|ceremoni/i);
   });
 
   it("travels free within 15 km of Málaga and charges €50 in Marbella", () => {

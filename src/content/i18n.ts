@@ -44,15 +44,15 @@ const en = {
       {
         name: "BASIC",
         hours: "4 Hours",
-        price: "€290 + IVA (VAT)",
+        price: "€290",
         tagline: "Perfect for capturing the most meaningful moments of your wedding day.",
-        coverage: ["Getting ready", "Wedding ceremony", "Couple portraits"],
+        coverage: ["Getting ready (1 hour before ceremony)", "Wedding ceremony", "Couple portraits"],
         included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "2 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
       },
       {
         name: "THE COMPLETE STORY",
         hours: "Up to 12 Hours",
-        price: "€490 + IVA (VAT)",
+        price: "€490",
         tagline: "From the excitement of getting ready to the last moments on the dance floor. Your entire wedding story, captured from beginning to end.",
         coverage: ["Getting ready", "Wedding ceremony", "Couple portraits", "Cocktail hour", "Dinner", "Party"],
         included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "3 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
@@ -62,8 +62,8 @@ const en = {
       title: "Add-ons",
       sub: "Make your package even more complete with these additional options:",
       items: [
-        { name: "Extra hour", price: "€50 + IVA (VAT)", d: "" },
-        { name: "Static wedding video", price: "€100 + IVA (VAT)", d: "A full, unedited recording of your chosen moment, captured with a stationary camera." },
+        { name: "Extra hour", price: "€50", d: "" },
+        { name: "Wedding video", price: "€100", d: "Recording of the ceremony." },
       ],
     },
     travel: {
@@ -166,15 +166,15 @@ const es: Dict = {
       {
         name: "BASIC",
         hours: "4 horas",
-        price: "290 € + IVA (VAT)",
+        price: "290 €",
         tagline: "Perfecto para capturar los momentos más importantes de vuestro día de boda.",
-        coverage: ["Preparativos", "Ceremonia", "Retrato de los novios"],
+        coverage: ["Preparativos (1 hora antes de la ceremonia)", "Ceremonia", "Retrato de los novios"],
         included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "2 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
       },
       {
         name: "THE COMPLETE STORY",
         hours: "Hasta 12 horas",
-        price: "490 € + IVA (VAT)",
+        price: "490 €",
         tagline: "Desde la ilusión de los preparativos hasta los últimos momentos en la pista de baile. Toda la historia de vuestra boda, capturada de principio a fin.",
         coverage: ["Preparativos", "Ceremonia", "Retrato de los novios", "Cóctel", "Cena", "Fiesta"],
         included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "3 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
@@ -184,8 +184,8 @@ const es: Dict = {
       title: "Extras",
       sub: "Completad vuestro paquete con estas opciones adicionales:",
       items: [
-        { name: "Hora extra", price: "50 € + IVA (VAT)", d: "" },
-        { name: "Vídeo de boda estático", price: "100 € + IVA (VAT)", d: "Una grabación completa y sin editar del momento que elijáis, capturada con una cámara fija." },
+        { name: "Hora extra", price: "50 €", d: "" },
+        { name: "Vídeo de boda", price: "100 €", d: "Grabación de la ceremonia." },
       ],
     },
     travel: {
@@ -286,15 +286,15 @@ const pl: Dict = {
       {
         name: "BASIC",
         hours: "4 godziny",
-        price: "290 € + IVA (VAT)",
+        price: "290 €",
         tagline: "Idealny, by uchwycić najważniejsze chwile Waszego dnia ślubu.",
-        coverage: ["Przygotowania", "Ceremonia ślubna", "Portrety pary młodej"],
+        coverage: ["Przygotowania (1 godzinę przed ceremonią)", "Ceremonia ślubna", "Portrety pary młodej"],
         included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "2 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],
       },
       {
         name: "THE COMPLETE STORY",
         hours: "Do 12 godzin",
-        price: "490 € + IVA (VAT)",
+        price: "490 €",
         tagline: "Od radości podczas przygotowań po ostatnie chwile na parkiecie. Cała historia Waszego ślubu, od początku do końca.",
         coverage: ["Przygotowania", "Ceremonia ślubna", "Portrety pary młodej", "Przyjęcie cocktailowe", "Obiad", "Zabawa weselna"],
         included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "3 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],
@@ -304,8 +304,8 @@ const pl: Dict = {
       title: "Dodatki",
       sub: "Uzupełnijcie swój pakiet o dodatkowe opcje:",
       items: [
-        { name: "Dodatkowa godzina", price: "50 € + IVA (VAT)", d: "" },
-        { name: "Statyczne wideo ślubne", price: "100 € + IVA (VAT)", d: "Pełny, nieedytowany zapis wybranego momentu, nagrany stacjonarną kamerą." },
+        { name: "Dodatkowa godzina", price: "50 €", d: "" },
+        { name: "Wideo ślubne", price: "100 €", d: "Nagranie ceremonii." },
       ],
     },
     travel: {
