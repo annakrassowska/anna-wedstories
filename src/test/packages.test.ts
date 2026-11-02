@@ -43,7 +43,7 @@ describe.each(LANGS)("Packages page (%s)", (lang) => {
     expect(extraHour.price).not.toMatch(/IVA|VAT/);
     expect(weddingVideo.price).not.toMatch(/IVA|VAT/);
     expect(weddingVideo.name).toMatch(/wedding video|vídeo de boda|wideo ślubne/i);
-    expect(weddingVideo.d).toMatch(/ceremony|ceremonia/i);
+    expect(weddingVideo.d).toMatch(/ceremony|ceremoni/i);
   });
 
   it("travels free within 15 km of Málaga and charges €50 in Marbella", () => {
