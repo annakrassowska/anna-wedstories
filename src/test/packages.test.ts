@@ -33,6 +33,8 @@ describe.each(LANGS)("Packages page (%s)", (lang) => {
     expect(basic.coverage).toHaveLength(3);
     expect(complete.coverage).toHaveLength(6);
     expect(basic.coverage[0]).toMatch(/1\s*(hour|hora|godzin)/i);
+    expect(basic.coverage.join(" ")).toMatch(/couple moments|momentos de los novios|chwile pary młodej/i);
+    expect(basic.coverage.join(" ")).not.toMatch(/portrait|retrato|portret/i);
     expect(basic.included.some((f) => /^2\b.*reel/i.test(f))).toBe(true);
     expect(complete.included.some((f) => /^3\b.*reel/i.test(f))).toBe(true);
   });
