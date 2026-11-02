@@ -46,7 +46,7 @@ const en = {
         hours: "4 Hours",
         price: "€290",
         tagline: "Perfect for capturing the most meaningful moments of your wedding day.",
-        coverage: ["Getting ready", "Wedding ceremony", "Couple portraits"],
+        coverage: ["Getting ready (1 hour before ceremony)", "Wedding ceremony", "Couple portraits"],
         included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "2 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
       },
       {
@@ -63,7 +63,7 @@ const en = {
       sub: "Make your package even more complete with these additional options:",
       items: [
         { name: "Extra hour", price: "€50", d: "" },
-        { name: "Static wedding video", price: "€100", d: "A full, unedited recording of your chosen moment, captured with a stationary camera." },
+        { name: "Wedding video", price: "€100", d: "Recording of the ceremony." },
       ],
     },
     travel: {
@@ -168,7 +168,7 @@ const es: Dict = {
         hours: "4 horas",
         price: "290 €",
         tagline: "Perfecto para capturar los momentos más importantes de vuestro día de boda.",
-        coverage: ["Preparativos", "Ceremonia", "Retrato de los novios"],
+        coverage: ["Preparativos (1 hora antes de la ceremonia)", "Ceremonia", "Retrato de los novios"],
         included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "2 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
       },
       {
@@ -185,7 +185,7 @@ const es: Dict = {
       sub: "Completad vuestro paquete con estas opciones adicionales:",
       items: [
         { name: "Hora extra", price: "50 €", d: "" },
-        { name: "Vídeo de boda estático", price: "100 €", d: "Una grabación completa y sin editar del momento que elijáis, capturada con una cámara fija." },
+        { name: "Vídeo de boda", price: "100 €", d: "Grabación de la ceremonia." },
       ],
     },
     travel: {
@@ -288,7 +288,7 @@ const pl: Dict = {
         hours: "4 godziny",
         price: "290 €",
         tagline: "Idealny, by uchwycić najważniejsze chwile Waszego dnia ślubu.",
-        coverage: ["Przygotowania", "Ceremonia ślubna", "Portrety pary młodej"],
+        coverage: ["Przygotowania (1 godzinę przed ceremonią)", "Ceremonia ślubna", "Portrety pary młodej"],
         included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "2 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],
       },
       {
@@ -305,7 +305,7 @@ const pl: Dict = {
       sub: "Uzupełnijcie swój pakiet o dodatkowe opcje:",
       items: [
         { name: "Dodatkowa godzina", price: "50 €", d: "" },
-        { name: "Statyczne wideo ślubne", price: "100 €", d: "Pełny, nieedytowany zapis wybranego momentu, nagrany stacjonarną kamerą." },
+        { name: "Wideo ślubne", price: "100 €", d: "Nagranie ceremonii." },
       ],
     },
     travel: {
