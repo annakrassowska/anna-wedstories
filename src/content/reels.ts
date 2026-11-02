@@ -9,7 +9,7 @@
 // Add or remove entries freely — the section adapts to however many you list.
 
 import kissCover from "@/assets/IMG_2489.jpg";
-import dressCover from "@/assets/IMG_2329.jpg";
+import partyCover from "@/assets/reel-gafas.jpg";
 import embraceCover from "@/assets/IMG_2370.jpg";
 
 export type Reel = {
@@ -22,6 +22,6 @@ export type Reel = {
 
 export const REELS: Reel[] = [
   { id: "archway-kiss", url: "https://www.instagram.com/p/DeWUu4wuOKH/", thumb: kissCover },
-  { id: "dress-reveal", url: "https://www.instagram.com/p/DfDIfDPOEup/", thumb: dressCover },
+  { id: "party-celebration", url: "https://www.instagram.com/p/DfDIfDPOEup/", thumb: partyCover },
   { id: "bride-and-guest", url: "https://www.instagram.com/p/DeMuWWNstIo/", thumb: embraceCover },
 ];
