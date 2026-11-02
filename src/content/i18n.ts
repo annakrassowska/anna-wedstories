@@ -85,7 +85,7 @@ const en = {
     watch: "Watch on Instagram",
     alts: [
       "A bride and groom kissing under a stone archway lit with magenta light",
-      "A bride in a satin robe looking at her wedding dress hanging on an antique wardrobe",
+      "A bride and groom celebrating at their wedding party in heart-shaped sunglasses under purple and blue lights",
       "A bride in an ivory gown embracing a guest in a red dress in front of a teal wall",
     ],
   },
@@ -207,7 +207,7 @@ const es: Dict = {
     watch: "Ver en Instagram",
     alts: [
       "Una novia y un novio besándose bajo un arco de piedra con luz magenta",
-      "Una novia en batín de satén mirando su vestido de boda colgado en un armario antiguo",
+      "Una novia y un novio celebrando en su fiesta de boda con gafas de corazón bajo luces moradas y azules",
       "Una novia en vestido marfil abrazando a una invitada de vestido rojo frente a una pared verde azulado",
     ],
   },
@@ -327,7 +327,7 @@ const pl: Dict = {
     watch: "Obejrzyj na Instagramie",
     alts: [
       "Panna młoda i pan młody całują się pod kamiennym łukiem w magentowym świetle",
-      "Panna młoda w satynowym peniuarze patrzy na swoją suknię wiszącą na starej szafie",
+      "Panna młoda i pan młody świętujący na weselu w okularach w kształcie serca w fioletowym i niebieskim świetle",
       "Panna młoda w kremowej sukni obejmuje kobietę w czerwonej sukni na tle turkusowej ściany",
     ],
   },
