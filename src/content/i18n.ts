@@ -377,7 +377,7 @@ const pl: Dict = {
     title: "Częste pytania.",
     sub: "Krótkie odpowiedzi na pytania, które słyszę najczęściej.",
     items: [
-      { q: "Czym jest twórczyni treści ślubnych?", a: "Uchwytuję autentyczne emocje, niepozowane chwile i drobne detale Waszego dnia ślubu telefonem oraz DJI Osmo Pocket. Tworzę prawdziwe, piękne treści, dzięki którym przeżyjecie swój ślub na nowo z nowej perspektywy." },
+      { q: "Czym jest twórczyni treści ślubnych?", a: "Uchwytuję autentyczne emocje, niepozowane chwile i drobne detale Waszego dnia ślubu telefonem iPhone oraz DJI Osmo Pocket. Tworzę prawdziwe, piękne treści, dzięki którym przeżyjecie swój ślub na nowo z nowej perspektywy." },
       { q: "Czym różni się twórczyni treści ślubnych od fotografa lub wideofilmowca?", a: "Podczas gdy fotograf i wideofilmowiec skupiają się na profesjonalnych zdjęciach i filmach jak z kina, ja nagrywam spontaniczne chwile zza kulis dokładnie w momencie, gdy się wydarzają. Moje podejście jest bardziej naturalne i dokumentalne — to dodatkowa perspektywa Waszego dnia." },
       { q: "Dlaczego warto zaprosić twórczynię treści na swój ślub?", a: "Dzień ślubu mija niezwykle szybko, a wiele drobnych chwil łatwo przeoczyć. Dbam o to, by prawdziwe emocje, spontaniczne reakcje i wyjątkowe wspomnienia zostały uchwycone — gotowe, by do nich wracać i się nimi dzielić." },
       { q: "Jakie chwile uchwytasz w ciągu dnia ślubu?", a: "Od przygotowań i ceremonii, przez pełne wzruszeń przemówienia i toast szampanem, aż po parkiet — nagrywam prawdziwe chwile dokładnie tak, jak się wydarzają. Nagrywam też dźwięk profesjonalnymi mikrofonami, dzięki czemu przypomnicie sobie nie tylko to, jak wyglądał Wasz ślub, ale i jak brzmiał." },
