@@ -336,13 +336,13 @@ function About({ t }: { t: Dict }) {
 function Faq({ t }: { t: Dict }) {
   const f = t.faq;
   return (
-    <section id="faq" className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-36">
-      <Reveal className="md:col-span-5">
+    <section id="faq" className="mx-auto max-w-3xl px-5 py-24 md:px-10 md:py-36">
+      <Reveal className="text-center">
         <p className="eyebrow text-taupe">{f.eyebrow}</p>
         <h2 className="headline mt-5">{f.title}</h2>
-        <p className="mt-6 max-w-md leading-relaxed text-muted-foreground">{f.sub}</p>
+        <p className="mx-auto mt-6 max-w-md leading-relaxed text-muted-foreground">{f.sub}</p>
       </Reveal>
-      <Reveal className="md:col-span-6 md:col-start-7">
+      <Reveal className="mt-14">
         <ul className="border-t">
           {f.items.map((item) => (
             <li key={item.q} className="border-b">
@@ -351,13 +351,14 @@ function Faq({ t }: { t: Dict }) {
                   <span>{item.q}</span>
                   <span aria-hidden className="mt-1 shrink-0 font-sans text-2xl leading-none text-taupe transition-transform duration-300 group-open:rotate-45">+</span>
                 </summary>
-                <p className="max-w-xl pb-8 -mt-2 leading-relaxed text-muted-foreground">{item.a}</p>
+                <p className="pb-8 -mt-2 leading-relaxed text-muted-foreground">{item.a}</p>
               </details>
             </li>
           ))}
         </ul>
       </Reveal>
     </section>
+
   );
 }
 
