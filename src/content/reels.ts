@@ -22,6 +22,6 @@ export type Reel = {
 
 export const REELS: Reel[] = [
   { id: "archway-kiss", url: "https://www.instagram.com/p/DeWUu4wuOKH/", thumb: kissCover },
-  { id: "party-celebration", url: "https://www.instagram.com/p/DfDIfDPOEup/", thumb: partyCover },
   { id: "bride-and-guest", url: "https://www.instagram.com/p/DeMuWWNstIo/", thumb: embraceCover },
+  { id: "party-celebration", url: "https://www.instagram.com/p/DfDIfDPOEup/", thumb: partyCover },
 ];

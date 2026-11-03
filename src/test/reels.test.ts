@@ -21,8 +21,8 @@ describe("Instagram and reels", () => {
     const urls = REELS.map((r) => r.url);
     expect(urls).toEqual([
       "https://www.instagram.com/p/DeWUu4wuOKH/",
-      "https://www.instagram.com/p/DfDIfDPOEup/",
       "https://www.instagram.com/p/DeMuWWNstIo/",
+      "https://www.instagram.com/p/DfDIfDPOEup/",
     ]);
     expect(new Set(urls).size).toBe(REELS.length);
     for (const url of urls) expect(url).not.toBe(INSTAGRAM_URL);

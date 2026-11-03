@@ -12,5 +12,6 @@
 - [x] Replace the third reel cover with Anna's uploaded photo (IMG_2370_still.jpg), with matching alt text in all three languages.
 - [x] Add a FAQ section to the homepage in all three languages with Anna's five questions and answers.
 - [x] Change the FAQ layout to a single full-width column (no side-by-side columns).
+- [x] Swap the second and third tiles in the Reels section, with photo descriptions following the new order.
 - [ ] Publish the site so anna-wedstories.lovable.app shows the current version.
 
