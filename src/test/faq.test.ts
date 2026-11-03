@@ -25,8 +25,9 @@ describe("FAQ section", () => {
     expect(answers).toMatch(/Osmo Pocket/i);
     expect(answers).toMatch(/Málaga|Maladze/);
     expect(answers).toMatch(/Costa del Sol/);
-    expect(answers).toMatch(/micro|micr(ó|o)fon|mikrofon/i);
+    expect(answers).not.toMatch(/micro|micr(ó|o)fon|mikrofon/i);
   });
+
 
 
   it("renders the FAQ as a page section with its own anchor", () => {
