@@ -12,3 +12,5 @@
 - Localized package pages reuse the Site shell with a packages mode; language switches retain the current page to keep navigation consistent.
 - Use trailing-underscore route filenames for package pages under language URLs so homepage content does not wrap the package page.
 - Photos live as plain files in src/assets imported directly by Vite (no .asset.json CDN pointers), so the built site is fully portable to any static host such as Cloudflare Pages.
+- Emit JSON-LD structured data through the route head() `meta` array under the `"script:ld+json"` key, never a `scripts` entry — the router only renders the meta form and silently drops the other.
+

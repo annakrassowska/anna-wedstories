@@ -104,7 +104,20 @@ const en = {
     p1: "I'm the person behind Anna WedStories, capturing the little moments, real emotions, and beautiful details that make every wedding unique.",
     alt: "Anna filming a wedding with her phone, standing beside white roses and palm trees wrapped in fairy lights",
   },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Questions, answered.",
+    sub: "Short answers to the things couples ask me most.",
+    items: [
+      { q: "What is a Wedding Content Creator?", a: "I capture the genuine emotions, candid moments and little details of your wedding day using my iPhone and DJI Osmo Pocket. I create authentic, beautiful content that lets you relive your wedding day from a fresh perspective." },
+      { q: "How is a Wedding Content Creator different from a wedding photographer or videographer?", a: "While your photographer and videographer focus on professional photos and cinematic films, I capture spontaneous, behind-the-scenes moments as they happen. My approach is more candid and documentary-style, giving you an extra perspective of your wedding day." },
+      { q: "Why should we hire a Wedding Content Creator for our wedding?", a: "Your wedding day goes by so quickly, and there are so many little moments you might miss. I make sure those genuine emotions, spontaneous reactions and special memories are captured, ready for you to relive and share." },
+      { q: "What moments do you capture throughout the wedding day?", a: "From getting ready and the ceremony to emotional speeches, champagne toasts and the dance floor, I capture the real moments as they unfold. I also record meaningful audio using professional microphones, so you can revisit not only how your wedding looked, but how it sounded." },
+      { q: "Do you travel for destination weddings?", a: "I'm based in Málaga and cover weddings across the Costa del Sol and surrounding areas, including Marbella, Estepona and beyond. I also love travelling for destination weddings across Spain and Europe to capture your unique love story." },
+    ],
+  },
   contact: {
+
     eyebrow: "Contact",
     title: "Let's tell your wedding story.",
     sub: "Planning a wedding in Spain? Tell me a little about your day, and let's see how we can capture it.",
@@ -226,7 +239,20 @@ const es: Dict = {
     p1: "Soy la persona detrás de Anna WedStories y capturo los pequeños momentos, las emociones reales y los detalles bonitos que hacen única cada boda.",
     alt: "Anna graba una boda con su teléfono, de pie junto a rosas blancas y palmeras envueltas en lucecitas",
   },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Preguntas frecuentes.",
+    sub: "Respuestas breves a las preguntas que más me hacéis.",
+    items: [
+      { q: "¿Qué es una creadora de contenido de bodas?", a: "Capturo las emociones verdaderas, los momentos espontáneos y los pequeños detalles de vuestro día de boda con mi iPhone y mi DJI Osmo Pocket. Creo contenido auténtico y bonito que os permite revivir vuestra boda desde una perspectiva nueva." },
+      { q: "¿En qué se diferencia una creadora de contenido de un fotógrafo o videógrafo de bodas?", a: "Mientras vuestro fotógrafo y videógrafo se centran en las fotos profesionales y las películas cinemáticas, yo capturo los momentos espontáneos entre bastidores a medida que suceden. Mi enfoque es más natural y documental, y os da una mirada extra a vuestro día." },
+      { q: "¿Por qué deberíamos contratar a una creadora de contenido para nuestra boda?", a: "El día de la boda pasa volando y hay muchos pequeños momentos que pueden pasar desapercibidos. Yo me encargo de que esas emociones verdaderas, reacciones espontáneas y recuerdos especiales queden guardados, listos para revivir y compartir." },
+      { q: "¿Qué momentos capturas a lo largo del día de la boda?", a: "Desde los preparativos y la ceremonia hasta los discursos emotivos, el brindis con champán y la pista de baile, capturo los momentos reales tal y como suceden. También grabo audio con micrófonos profesionales, para que podáis revivir no solo cómo se vio vuestra boda, sino también cómo sonó." },
+      { q: "¿Viajas para bodas de destino?", a: "Vivo en Málaga y cubro bodas por toda la Costa del Sol y los alrededores, incluidos Marbella, Estepona y más allá. También me encanta viajar para bodas de destino por toda España y Europa y capturar vuestra historia de amor." },
+    ],
+  },
   contact: {
+
     eyebrow: "Contacto",
     title: "Contemos la historia de tu boda.",
     sub: "¿Planeas casarte en España? Cuéntame un poco sobre tu día y veamos cómo podemos capturarlo.",
@@ -346,7 +372,20 @@ const pl: Dict = {
     p1: "To ja stoję za Anna WedStories — uchwytuję drobne chwile, prawdziwe emocje i piękne detale, które sprawiają, że każdy ślub jest wyjątkowy.",
     alt: "Anna nagrywa wesele telefonem, stojąc wśród białych róż i palm oplecionych lampkami",
   },
+  faq: {
+    eyebrow: "FAQ",
+    title: "Częste pytania.",
+    sub: "Krótkie odpowiedzi na pytania, które słyszę najczęściej.",
+    items: [
+      { q: "Czym jest twórczyni treści ślubnych?", a: "Uchwytuję autentyczne emocje, niepozowane chwile i drobne detale Waszego dnia ślubu telefonem iPhone oraz DJI Osmo Pocket. Tworzę prawdziwe, piękne treści, dzięki którym przeżyjecie swój ślub na nowo z nowej perspektywy." },
+      { q: "Czym różni się twórczyni treści ślubnych od fotografa lub wideofilmowca?", a: "Podczas gdy fotograf i wideofilmowiec skupiają się na profesjonalnych zdjęciach i filmach jak z kina, ja nagrywam spontaniczne chwile zza kulis dokładnie w momencie, gdy się wydarzają. Moje podejście jest bardziej naturalne i dokumentalne — to dodatkowa perspektywa Waszego dnia." },
+      { q: "Dlaczego warto zaprosić twórczynię treści na swój ślub?", a: "Dzień ślubu mija niezwykle szybko, a wiele drobnych chwil łatwo przeoczyć. Dbam o to, by prawdziwe emocje, spontaniczne reakcje i wyjątkowe wspomnienia zostały uchwycone — gotowe, by do nich wracać i się nimi dzielić." },
+      { q: "Jakie chwile uchwytasz w ciągu dnia ślubu?", a: "Od przygotowań i ceremonii, przez pełne wzruszeń przemówienia i toast szampanem, aż po parkiet — nagrywam prawdziwe chwile dokładnie tak, jak się wydarzają. Nagrywam też dźwięk profesjonalnymi mikrofonami, dzięki czemu przypomnicie sobie nie tylko to, jak wyglądał Wasz ślub, ale i jak brzmiał." },
+      { q: "Czy dojeżdżasz na śluby za granicą?", a: "Mieszkam w Maladze i obsługuję śluby w całej Costa del Sol i okolicy, w tym w Marbelli, Esteponie i dalej. Chętnie wyjeżdżam też na śluby za granicą — po całej Hiszpanii i Europie — żeby uchwycić Waszą wyjątkową historię miłosną." },
+    ],
+  },
   contact: {
+
     eyebrow: "Kontakt",
     title: "Opowiedzmy historię Waszego ślubu.",
     sub: "Planujecie ślub w Hiszpanii? Napiszcie mi trochę o swoim dniu, a zobaczymy, jak możemy go uchwycić.",
