@@ -8,6 +8,17 @@ export function langHead(lang: Lang, page: "home" | "packages" = "home") {
     description: `${dict[lang].packages.lead} ${dict[lang].packages.items.map((item) => `${item.name}: ${item.hours}, ${item.price}`).join(". ")}`,
   } : dict[lang].meta;
   const locale = { en: "en_GB", es: "es_ES", pl: "pl_PL" }[lang];
+  // Search engines can show the questions and answers directly in results,
+  // so the FAQ content is also published as structured data on the home pages.
+  const faqSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: dict[lang].faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  });
   return {
     meta: [
       { title: m.title },
@@ -26,5 +37,7 @@ export function langHead(lang: Lang, page: "home" | "packages" = "home") {
       ...LANGS.map((l) => ({ rel: "alternate", hrefLang: l, href: SITE_URL + path(l) })),
       { rel: "alternate", hrefLang: "x-default", href: SITE_URL + path("en") },
     ],
+    ...(page === "home" ? { scripts: [{ type: "application/ld+json", html: faqSchema }] } : {}),
   };
+
 }

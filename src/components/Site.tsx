@@ -47,7 +47,9 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
         <Reels t={t} />
         <Experience t={t} />
         <About t={t} />
+        <Faq t={t} />
         <Contact t={t} wa={wa} />
+
         </>}
       </main>
       <Footer t={t} wa={wa} lang={lang} />
@@ -331,7 +333,36 @@ function About({ t }: { t: Dict }) {
   );
 }
 
+function Faq({ t }: { t: Dict }) {
+  const f = t.faq;
+  return (
+    <section id="faq" className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-12 md:px-10 md:py-36">
+      <Reveal className="md:col-span-5">
+        <p className="eyebrow text-taupe">{f.eyebrow}</p>
+        <h2 className="headline mt-5">{f.title}</h2>
+        <p className="mt-6 max-w-md leading-relaxed text-muted-foreground">{f.sub}</p>
+      </Reveal>
+      <Reveal className="md:col-span-6 md:col-start-7">
+        <ul className="border-t">
+          {f.items.map((item) => (
+            <li key={item.q} className="border-b">
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 font-serif text-xl leading-snug md:text-2xl [&::-webkit-details-marker]:hidden">
+                  <span>{item.q}</span>
+                  <span aria-hidden className="mt-1 shrink-0 font-sans text-2xl leading-none text-taupe transition-transform duration-300 group-open:rotate-45">+</span>
+                </summary>
+                <p className="max-w-xl pb-8 -mt-2 leading-relaxed text-muted-foreground">{item.a}</p>
+              </details>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+    </section>
+  );
+}
+
 function Contact({ t, wa }: { t: Dict; wa: string | null }) {
+
   const c = t.contact;
   return (
     <section id="contact" className="bg-secondary py-24 md:py-36">
@@ -363,6 +394,8 @@ function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
         <nav aria-label={t.footer.nav} className="flex flex-wrap gap-x-8 gap-y-3">
           {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow hover:underline">{t.nav[k]}</Link>)}
           <Link to={packagePath(lang)} className="eyebrow hover:underline">{t.packages.eyebrow}</Link>
+          <Link to={langPath(lang)} hash="faq" className="eyebrow hover:underline">{t.faq.eyebrow}</Link>
+
           {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">Instagram</a>}
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">WhatsApp</a>}
         </nav>
