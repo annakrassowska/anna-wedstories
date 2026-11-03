@@ -19,14 +19,15 @@ describe("FAQ section", () => {
     }
   });
 
-  it.each(LANGS)("says who the creator is and where she travels in %s", (lang) => {
+  it.each(LANGS)("says what she films with and where she travels in %s", (lang) => {
     const answers = dict[lang].faq.items.map((item) => item.a).join(" ");
     expect(answers).toMatch(/iPhone/i);
     expect(answers).toMatch(/Osmo Pocket/i);
-    expect(answers).toMatch(/M(á|a)laga|M(á|a)laga/.source, "mentions Málaga");
-    expect(answers).toMatch(/M(á|a)laga|M(á|a)laga|Maladze/);
+    expect(answers).toMatch(/Málaga|Maladze/);
+    expect(answers).toMatch(/Costa del Sol/);
     expect(answers).toMatch(/micro|micr(ó|o)fon|mikrofon/i);
   });
+
 
   it("renders the FAQ as a page section with its own anchor", () => {
     expect(site).toMatch(/<Faq t=\{t\} \/>/);
