@@ -16,6 +16,7 @@ export const INSTAGRAM_HANDLE = "anna_wedstories";
 /** Inquiry form (Tally). The contact section opens this public link in a new tab.
  *  (The editor link /forms/xXkebo is private; /r/xXkebo is the shareable one.) */
 export const TALLY_URL = "https://tally.so/r/xXkebo";
+export const EMAIL = "annawedstories@gmail.com";
 
 export function whatsappLink(message: string) {
   const n = WHATSAPP_NUMBER.replace(/\D/g, "");
