@@ -1,4 +1,6 @@
 # Tasks
+- [x] Fix package heading order in all three languages: one H1, introductory H2, package names H3.
+- [ ] Complete the privacy policy after Anna confirms the legal controller name, data-request contact, form provider and retention practices; keep the composite SEO finding unresolved until then.
 - [x] Move packages to a separate page in English, Spanish and Polish with working navigation.
 - [x] Set package padding to 10 px, append + IVA (VAT), and update English scheduling wording.
 - [x] Verify package pages and navigation.
