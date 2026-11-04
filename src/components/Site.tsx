@@ -191,7 +191,7 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
       <Reveal className="max-w-2xl">
         <p className="eyebrow text-taupe">{p.eyebrow}</p>
         <h1 className="headline mt-5">{p.title}</h1>
-        <p className="mt-8 font-serif text-3xl leading-snug md:text-4xl">{p.lead}</p>
+        <h2 className="mt-8 font-serif text-3xl leading-snug md:text-4xl">{p.lead}</h2>
         <p className="mt-6 leading-relaxed text-muted-foreground">{p.intro}</p>
       </Reveal>
 
@@ -199,7 +199,7 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
         {p.items.map((item, i) => (
           <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-[10px]" : "flex flex-col border p-[10px]"}>
             <span className="eyebrow text-taupe">0{i + 1}</span>
-            <h2 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h2>
+            <h3 className="mt-4 font-serif text-2xl tracking-[0.2em]">{item.name}</h3>
             <p className="mt-6 flex flex-wrap items-baseline justify-between gap-x-6 border-b pb-6 font-serif text-3xl">
               <span>{item.hours}</span>
               <span>{item.price}</span>
