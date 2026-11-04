@@ -14,6 +14,7 @@ import { Route as EsRouteImport } from './routes/es'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PlRouteImport } from './routes/pl'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as EsPackagesRouteImport } from './routes/es_.packages'
 import { Route as PlPackagesRouteImport } from './routes/pl_.packages'
 
@@ -42,6 +43,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EsPackagesRoute = EsPackagesRouteImport.update({
   id: '/es_/packages',
   path: '/es/packages',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/es/packages': typeof EsPackagesRoute
   '/pl/packages': typeof PlPackagesRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/es/packages': typeof EsPackagesRoute
   '/pl/packages': typeof PlPackagesRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/es_/packages': typeof EsPackagesRoute
   '/pl_/packages': typeof PlPackagesRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/packages'
     | '/pl'
     | '/privacy'
+    | '/sitemap.xml'
     | '/es/packages'
     | '/pl/packages'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/packages'
     | '/pl'
     | '/privacy'
+    | '/sitemap.xml'
     | '/es/packages'
     | '/pl/packages'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/packages'
     | '/pl'
     | '/privacy'
+    | '/sitemap.xml'
     | '/es_/packages'
     | '/pl_/packages'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   PackagesRoute: typeof PackagesRoute
   PlRoute: typeof PlRoute
   PrivacyRoute: typeof PrivacyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   EsPackagesRoute: typeof EsPackagesRoute
   PlPackagesRoute: typeof PlPackagesRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/es_/packages': {
       id: '/es_/packages'
       path: '/es/packages'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   PackagesRoute: PackagesRoute,
   PlRoute: PlRoute,
   PrivacyRoute: PrivacyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   EsPackagesRoute: EsPackagesRoute,
   PlPackagesRoute: PlPackagesRoute,
 }
