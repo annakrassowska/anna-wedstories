@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
-import { INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
+import { EMAIL, INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 import { REELS } from "@/content/reels";
 import { Instagram, Play } from "lucide-react";
 // Anna's own photographs, bundled with the site so they work on any host
@@ -375,6 +375,10 @@ function Contact({ t, wa }: { t: Dict; wa: string | null }) {
           <a href={TALLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-solid">{c.submit}</a>
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">{t.whatsapp.label}</a>}
         </div>
+        <p className="mt-8 text-sm text-muted-foreground">
+          {c.emailLabel}{" "}
+          <a href={`mailto:${EMAIL}`} className="underline underline-offset-4 hover:text-foreground">{EMAIL}</a>
+        </p>
         <p className="mt-10 text-xs text-muted-foreground">
           <Link to="/privacy" className="underline">{t.footer.privacy}</Link>
         </p>
