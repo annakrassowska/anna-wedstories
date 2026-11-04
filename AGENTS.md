@@ -14,3 +14,5 @@
 - Photos live as plain files in src/assets imported directly by Vite (no .asset.json CDN pointers), so the built site is fully portable to any static host such as Cloudflare Pages.
 - Emit JSON-LD structured data through the route head() `meta` array under the `"script:ld+json"` key, never a `scripts` entry — the router only renders the meta form and silently drops the other.
 
+
+- Sitemap: router-derived helper in src/lib/sitemap.ts + server route src/routes/sitemap[.]xml.ts; every route declares staticData.sitemap (required type). BASE_URL is https://anna-wedstories.com (Anna confirmed 2026-11-04); no lastmod without page-specific timestamps.

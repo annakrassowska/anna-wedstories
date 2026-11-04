@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/privacy")({
+  staticData: { sitemap: false },
   head: () => ({
     meta: [
       { title: "Privacy Policy — Anna WedStories" },
