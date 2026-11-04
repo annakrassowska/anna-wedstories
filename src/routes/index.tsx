@@ -3,6 +3,7 @@ import { Site } from "@/components/Site";
 import { langHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => langHead("en"),
   component: () => <Site lang="en" />,
 });
