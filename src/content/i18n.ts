@@ -3,6 +3,12 @@ export const LANGS: Lang[] = ["en", "es", "pl"];
 export const langPath = (l: Lang) => l === "en" ? "/" : l === "es" ? "/es" : "/pl";
 export const packagePath = (l: Lang) => l === "en" ? "/packages" : l === "es" ? "/es/packages" : "/pl/packages";
 
+/** English-only landing page for the search phrase "wedding content creator Málaga".
+ *  There is no Spanish or Polish version of this page, so those languages fall
+ *  back to their own home page instead of a half-translated one. */
+export const MALAGA_PATH = "/wedding-content-creator-malaga";
+export const malagaPath = (l: Lang) => l === "en" ? MALAGA_PATH : langPath(l);
+
 const en = {
   meta: {
     title: "Anna WedStories — Wedding Content Creator in Málaga & Costa del Sol",

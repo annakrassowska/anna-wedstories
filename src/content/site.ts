@@ -3,7 +3,7 @@
 // ============================================================
 
 /** Your live domain, no trailing slash. Used for canonical + hreflang links. */
-export const SITE_URL = "https://annawedstories.com"; // [REPLACE once domain is purchased]
+export const SITE_URL = "https://anna-wedstories.com"; // confirmed by Anna 2026-11-04
 
 /** WhatsApp number in international format, digits only (e.g. "34600111222").
  *  Leave empty to hide the WhatsApp button. */
