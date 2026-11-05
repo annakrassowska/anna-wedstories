@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
+import { dict, LANGS, langPath, malagaPath, MALAGA_PATH, packagePath, type Lang, type Dict } from "@/content/i18n";
+import { malaga } from "@/content/malaga";
 import { EMAIL, INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 import { REELS } from "@/content/reels";
 import { Instagram, Play } from "lucide-react";
@@ -27,7 +28,9 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
   return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }
 
-export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "packages" }) {
+export type SitePage = "home" | "packages" | "malaga";
+
+export function Site({ lang, page = "home" }: { lang: Lang; page?: SitePage }) {
   const t = dict[lang];
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -40,7 +43,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-background focus:p-3">Skip to content</a>
       <Header t={t} lang={lang} page={page} />
       <main id="main" className={page === "packages" ? "pt-20" : undefined}>
-        {page === "packages" ? <Packages t={t} lang={lang} /> : <>
+        {page === "packages" ? <Packages t={t} lang={lang} /> : page === "malaga" ? <Malaga t={t} lang={lang} wa={wa} /> : <>
         <Hero t={t} />
         <Intro t={t} />
         <Services t={t} />
@@ -63,7 +66,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
   );
 }
 
-function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packages" }) {
+function Header({ t, lang, page }: { t: Dict; lang: Lang; page: SitePage }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -107,14 +110,14 @@ function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packag
   );
 }
 
-function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: "home" | "packages" }) {
+function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: SitePage }) {
   return (
     <nav aria-label={label}>
       <ul className="flex items-center gap-2 eyebrow">
         {LANGS.map((l, i) => (
           <li key={l} className="flex items-center gap-2">
             {i > 0 && <span aria-hidden className="opacity-40">/</span>}
-            <Link to={page === "packages" ? packagePath(l) : langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
+            <Link to={page === "packages" ? packagePath(l) : page === "malaga" ? malagaPath(l) : langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
               className={`py-2 ${l === lang ? "underline underline-offset-4" : "opacity-60 hover:opacity-100"}`}>{l.toUpperCase()}</Link>
           </li>
         ))}
@@ -255,6 +258,109 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
   );
 }
 
+
+// Landing page for /wedding-content-creator-malaga. English only, single
+// column (Anna's rule for text-heavy sections), and it reuses the Reels and
+// Contact sections from the home page.
+function Malaga({ t, lang, wa }: { t: Dict; lang: Lang; wa: string | null }) {
+  const m = malaga;
+  return (
+    <>
+      <section id="top" className="bg-primary text-primary-foreground">
+        <div className="mx-auto grid max-w-[1400px] items-center gap-6 px-5 pb-14 pt-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16 lg:px-10 lg:pb-28 lg:pt-36">
+          <div className="order-2 min-w-0 lg:order-1">
+            <p className="eyebrow animate-rise">{m.hero.eyebrow}</p>
+            <h1 className="display mt-5 max-w-3xl animate-rise [animation-delay:150ms] lg:tracking-[-0.015em]">{m.hero.title}</h1>
+            <p className="mt-6 max-w-md text-lg opacity-90 animate-rise [animation-delay:300ms]">{m.hero.sub}</p>
+            <div className="mt-10 flex flex-wrap gap-3 animate-rise [animation-delay:450ms]">
+              <a href="#contact" className="btn btn-light">{m.hero.cta}</a>
+              <a href="#reels" className="btn btn-outline-light">{m.hero.cta2}</a>
+            </div>
+          </div>
+          <div className="order-1 w-full max-w-[280px] justify-self-center overflow-hidden sm:max-w-[380px] lg:order-2 lg:max-w-[520px] lg:justify-self-end">
+            <img src={creatorAsset} alt={m.hero.alt} width={1060} height={1498} fetchPriority="high"
+              className="aspect-[3/4] max-h-[44svh] w-full object-cover animate-slowzoom lg:aspect-auto lg:h-[min(78svh,760px)] lg:max-h-none" />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-5 py-24 md:px-10 md:py-36">
+        <Reveal>
+          <p className="eyebrow text-taupe">{m.what.eyebrow}</p>
+          <h2 className="headline mt-5">{m.what.title}</h2>
+          <p className="mt-8 leading-relaxed text-muted-foreground">{m.what.p1}</p>
+          <p className="mt-6 leading-relaxed text-muted-foreground">{m.what.p2}</p>
+        </Reveal>
+      </section>
+
+      <section className="bg-secondary py-24 md:py-36">
+        <div className="mx-auto max-w-3xl px-5 md:px-10">
+          <Reveal>
+            <h2 className="headline">{m.details.title}</h2>
+          </Reveal>
+          <ul className="mt-12 border-t">
+            {m.details.items.map((d, i) => (
+              <Reveal key={d.t}>
+                <li className="border-b py-8">
+                  <span className="eyebrow text-taupe">0{i + 1}</span>
+                  <h3 className="mt-4 font-serif text-2xl">{d.t}</h3>
+                  <p className="mt-3 max-w-xl leading-relaxed text-muted-foreground">{d.d}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-5 py-24 md:px-10 md:py-36">
+        <Reveal>
+          <p className="eyebrow text-taupe">{m.local.eyebrow}</p>
+          <h2 className="headline mt-5">{m.local.title}</h2>
+          <p className="mt-8 leading-relaxed text-muted-foreground">{m.local.p1}</p>
+          <p className="eyebrow mt-10 text-taupe">{m.local.travelLabel}</p>
+          <ul className="mt-4 border-t">
+            {m.local.travel.map((tr) => (
+              <li key={tr.place} className="flex flex-wrap items-baseline justify-between gap-x-6 border-b py-4">
+                <span className="font-serif text-lg">{tr.place}</span>
+                <span className="text-sm text-taupe">{tr.fee}</span>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      <Reels t={t} />
+
+      <section className="mx-auto max-w-3xl px-5 py-24 md:px-10 md:py-36">
+        <Reveal>
+          <p className="eyebrow text-taupe">{m.packages.eyebrow}</p>
+          <h2 className="headline mt-5">{m.packages.title}</h2>
+          <p className="mt-6 leading-relaxed text-muted-foreground">{m.packages.sub}</p>
+        </Reveal>
+        <ul className="mt-12 border-t">
+          {m.packages.items.map((item) => (
+            <Reveal key={item.name}>
+              <li className="border-b py-8">
+                <h3 className="font-serif text-xl tracking-[0.2em]">{item.name}</h3>
+                <p className="mt-4 flex flex-wrap items-baseline justify-between gap-x-6 font-serif text-2xl">
+                  <span>{item.hours}</span>
+                  <span>{item.price}</span>
+                </p>
+                <p className="mt-4 max-w-xl leading-relaxed text-muted-foreground">{item.note}</p>
+              </li>
+            </Reveal>
+          ))}
+        </ul>
+        <Reveal className="mt-10">
+          <p className="leading-relaxed text-muted-foreground">{m.packages.addOns}</p>
+          <Link to={packagePath(lang)} className="btn btn-solid mt-8 inline-flex">{m.packages.cta}</Link>
+        </Reveal>
+      </section>
+
+      <Contact t={t} wa={wa} />
+    </>
+  );
+}
 
 function Reels({ t }: { t: Dict }) {
   const r = t.reels;
@@ -400,6 +506,7 @@ function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
           {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow hover:underline">{t.nav[k]}</Link>)}
           <Link to={packagePath(lang)} className="eyebrow hover:underline">{t.packages.eyebrow}</Link>
           <Link to={langPath(lang)} hash="faq" className="eyebrow hover:underline">{t.faq.eyebrow}</Link>
+          <Link to={MALAGA_PATH} className="eyebrow hover:underline">{malaga.footer}</Link>
 
           {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">Instagram</a>}
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">WhatsApp</a>}

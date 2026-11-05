@@ -16,3 +16,4 @@
 
 
 - Sitemap: router-derived helper in src/lib/sitemap.ts + server route src/routes/sitemap[.]xml.ts; every route declares staticData.sitemap (required type). BASE_URL is https://anna-wedstories.com (Anna confirmed 2026-11-04); no lastmod without page-specific timestamps.
+- Keyword landing pages (e.g. /wedding-content-creator-malaga) stay single-language: their copy lives in its own module under src/content/, the route reuses the Site shell through a page mode, and the language switch falls back to that language's home page instead of a half-translated copy. Keep such copy free of anything Anna has not supplied (no invented testimonials, venue names or counts).

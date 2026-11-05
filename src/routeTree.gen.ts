@@ -15,6 +15,7 @@ import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PlRouteImport } from './routes/pl'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as WeddingContentCreatorMalagaRouteImport } from './routes/wedding-content-creator-malaga'
 import { Route as EsPackagesRouteImport } from './routes/es_.packages'
 import { Route as PlPackagesRouteImport } from './routes/pl_.packages'
 
@@ -48,6 +49,12 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WeddingContentCreatorMalagaRoute =
+  WeddingContentCreatorMalagaRouteImport.update({
+    id: '/wedding-content-creator-malaga',
+    path: '/wedding-content-creator-malaga',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const EsPackagesRoute = EsPackagesRouteImport.update({
   id: '/es_/packages',
   path: '/es/packages',
@@ -66,6 +73,7 @@ export interface FileRoutesByFullPath {
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wedding-content-creator-malaga': typeof WeddingContentCreatorMalagaRoute
   '/es/packages': typeof EsPackagesRoute
   '/pl/packages': typeof PlPackagesRoute
 }
@@ -76,6 +84,7 @@ export interface FileRoutesByTo {
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wedding-content-creator-malaga': typeof WeddingContentCreatorMalagaRoute
   '/es/packages': typeof EsPackagesRoute
   '/pl/packages': typeof PlPackagesRoute
 }
@@ -87,6 +96,7 @@ export interface FileRoutesById {
   '/pl': typeof PlRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/wedding-content-creator-malaga': typeof WeddingContentCreatorMalagaRoute
   '/es_/packages': typeof EsPackagesRoute
   '/pl_/packages': typeof PlPackagesRoute
 }
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/pl'
     | '/privacy'
     | '/sitemap.xml'
+    | '/wedding-content-creator-malaga'
     | '/es/packages'
     | '/pl/packages'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/pl'
     | '/privacy'
     | '/sitemap.xml'
+    | '/wedding-content-creator-malaga'
     | '/es/packages'
     | '/pl/packages'
   id:
@@ -119,6 +131,7 @@ export interface FileRouteTypes {
     | '/pl'
     | '/privacy'
     | '/sitemap.xml'
+    | '/wedding-content-creator-malaga'
     | '/es_/packages'
     | '/pl_/packages'
   fileRoutesById: FileRoutesById
@@ -130,6 +143,7 @@ export interface RootRouteChildren {
   PlRoute: typeof PlRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  WeddingContentCreatorMalagaRoute: typeof WeddingContentCreatorMalagaRoute
   EsPackagesRoute: typeof EsPackagesRoute
   PlPackagesRoute: typeof PlPackagesRoute
 }
@@ -178,6 +192,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wedding-content-creator-malaga': {
+      id: '/wedding-content-creator-malaga'
+      path: '/wedding-content-creator-malaga'
+      fullPath: '/wedding-content-creator-malaga'
+      preLoaderRoute: typeof WeddingContentCreatorMalagaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/es_/packages': {
       id: '/es_/packages'
       path: '/es/packages'
@@ -202,6 +223,7 @@ const rootRouteChildren: RootRouteChildren = {
   PlRoute: PlRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  WeddingContentCreatorMalagaRoute: WeddingContentCreatorMalagaRoute,
   EsPackagesRoute: EsPackagesRoute,
   PlPackagesRoute: PlPackagesRoute,
 }
