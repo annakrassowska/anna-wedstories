@@ -15,5 +15,7 @@
 - [x] Add a FAQ section to the homepage in all three languages with Anna's five questions and answers.
 - [x] Change the FAQ layout to a single full-width column (no side-by-side columns).
 - [x] Swap the second and third tiles in the Reels section, with photo descriptions following the new order.
+- [x] Add the /wedding-content-creator-malaga landing page (English), with its own metadata, structured data, footer link and sitemap entry.
+- [x] Point SITE_URL at the confirmed domain anna-wedstories.com so canonical and hreflang match the sitemap.
 - [ ] Publish the site so anna-wedstories.lovable.app shows the current version.
 
