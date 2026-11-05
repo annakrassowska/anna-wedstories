@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { dict, LANGS, langPath, packagePath, type Lang, type Dict } from "@/content/i18n";
+import { dict, LANGS, langPath, malagaPath, MALAGA_PATH, packagePath, type Lang, type Dict } from "@/content/i18n";
+import { malaga } from "@/content/malaga";
 import { EMAIL, INSTAGRAM_URL, TALLY_URL, whatsappLink } from "@/content/site";
 import { REELS } from "@/content/reels";
 import { Instagram, Play } from "lucide-react";
@@ -27,7 +28,9 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
   return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }
 
-export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "packages" }) {
+export type SitePage = "home" | "packages" | "malaga";
+
+export function Site({ lang, page = "home" }: { lang: Lang; page?: SitePage }) {
   const t = dict[lang];
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -40,7 +43,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-background focus:p-3">Skip to content</a>
       <Header t={t} lang={lang} page={page} />
       <main id="main" className={page === "packages" ? "pt-20" : undefined}>
-        {page === "packages" ? <Packages t={t} lang={lang} /> : <>
+        {page === "packages" ? <Packages t={t} lang={lang} /> : page === "malaga" ? <Malaga t={t} lang={lang} wa={wa} /> : <>
         <Hero t={t} />
         <Intro t={t} />
         <Services t={t} />
@@ -63,7 +66,7 @@ export function Site({ lang, page = "home" }: { lang: Lang; page?: "home" | "pac
   );
 }
 
-function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packages" }) {
+function Header({ t, lang, page }: { t: Dict; lang: Lang; page: SitePage }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -107,14 +110,14 @@ function Header({ t, lang, page }: { t: Dict; lang: Lang; page: "home" | "packag
   );
 }
 
-function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: "home" | "packages" }) {
+function LangSwitch({ lang, label, page }: { lang: Lang; label: string; page: SitePage }) {
   return (
     <nav aria-label={label}>
       <ul className="flex items-center gap-2 eyebrow">
         {LANGS.map((l, i) => (
           <li key={l} className="flex items-center gap-2">
             {i > 0 && <span aria-hidden className="opacity-40">/</span>}
-            <Link to={page === "packages" ? packagePath(l) : langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
+            <Link to={page === "packages" ? packagePath(l) : page === "malaga" ? malagaPath(l) : langPath(l)} hrefLang={l} aria-current={l === lang ? "page" : undefined}
               className={`py-2 ${l === lang ? "underline underline-offset-4" : "opacity-60 hover:opacity-100"}`}>{l.toUpperCase()}</Link>
           </li>
         ))}
@@ -400,6 +403,7 @@ function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
           {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow hover:underline">{t.nav[k]}</Link>)}
           <Link to={packagePath(lang)} className="eyebrow hover:underline">{t.packages.eyebrow}</Link>
           <Link to={langPath(lang)} hash="faq" className="eyebrow hover:underline">{t.faq.eyebrow}</Link>
+          <Link to={MALAGA_PATH} className="eyebrow hover:underline">{malaga.footer}</Link>
 
           {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">Instagram</a>}
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">WhatsApp</a>}
