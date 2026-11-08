@@ -27,7 +27,7 @@ function Privacy() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-foreground">{"1. Responsable del tratamiento"}</h2>
           <p>{"En cumplimiento del Reglamento General de Protección de Datos (RGPD) y de la Ley Orgánica 3/2018 (LOPDGDD), se informa de que los datos personales recogidos a través de esta página web serán tratados por:"}</p>
-          <p>{"Responsable: [Nombre y apellidos de la titular o razón social]"}</p>
+          <p>{"Responsable: Anna Krassowska"}</p>
           <p>{"Nombre comercial: Anna WedStories"}</p>
           <p>{"Domicilio: Calle Cortes El Viejo 4"}</p>
           <p>{"Ubicación: Málaga, España"}</p>
