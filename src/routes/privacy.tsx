@@ -29,7 +29,7 @@ function Privacy() {
           <p>{"En cumplimiento del Reglamento General de Protección de Datos (RGPD) y de la Ley Orgánica 3/2018 (LOPDGDD), se informa de que los datos personales recogidos a través de esta página web serán tratados por:"}</p>
           <p>{"Responsable: [Nombre y apellidos de la titular o razón social]"}</p>
           <p>{"Nombre comercial: Anna WedStories"}</p>
-          <p>{"Domicilio: [Dirección profesional o domicilio fiscal]"}</p>
+          <p>{"Domicilio: Calle Cortes El Viejo 4"}</p>
           <p>{"Ubicación: Málaga, España"}</p>
           <p>{"Correo electrónico: annawedstories@gmail.com"}</p>
           <p>{"Sitio web: https://anna-wedstories.com/"}</p>
