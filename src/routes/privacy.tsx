@@ -75,7 +75,7 @@ function Privacy() {
           <h2 className="text-xl font-semibold text-foreground">{"5. ¿Durante cuánto tiempo conservamos tus datos?"}</h2>
           <p>{"Los datos personales se conservarán durante el tiempo necesario para atender tu solicitud y gestionar la posible relación comercial."}</p>
           <p>{"Cuando exista una relación contractual, los datos se conservarán mientras dure la prestación del servicio y posteriormente durante los plazos exigidos por la legislación aplicable."}</p>
-          <p>{"Los datos utilizados para atender consultas que no den lugar a una contratación se conservarán durante el plazo de [indicar plazo] y posteriormente serán eliminados, salvo que exista una obligación legal que justifique su conservación."}</p>
+          <p>{"Los datos utilizados para atender consultas que no den lugar a una contratación se conservarán durante el plazo de 2 años y posteriormente serán eliminados, salvo que exista una obligación legal que justifique su conservación."}</p>
         </section>
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-foreground">{"6. ¿Compartimos tus datos con terceros?"}</h2>
