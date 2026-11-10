@@ -494,7 +494,7 @@ function Contact({ t, wa }: { t: Dict; wa: string | null }) {
 }
 
 function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
-  const links = [["home", "#top"], ["about", "#about"], ["services", "#services"], ["contact", "#contact"]] as const;
+  const links = [["about", "#about"], ["services", "#services"], ["contact", "#contact"]] as const;
   return (
     <footer className="mx-auto max-w-[1400px] px-5 py-16 md:px-10">
       <div className="flex flex-col justify-between gap-10 md:flex-row">
