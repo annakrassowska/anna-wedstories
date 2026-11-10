@@ -18,7 +18,7 @@ const en = {
   nav: { home: "Home", about: "About", services: "Services", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
   hero: {
     title: "Wedding content creator in\u00a0Málaga",
-    sub: "Relive your wedding day within 24 hours. Candid videos, genuine emotions, and beautiful memories ready to share.",
+    sub: "Capturing the magic of your wedding in Málaga, Marbella & Costa del Sol. Relive your wedding day within 24 hours. Candid videos, genuine emotions, and beautiful memories ready to share.",
     location: "Málaga · Costa del Sol · Spain",
     cta: "Check Your Date",
     cta2: "Explore the Stories",
