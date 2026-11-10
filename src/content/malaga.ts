@@ -9,7 +9,7 @@
 // covers, the languages she works in, and the package prices.
 
 export const malaga = {
-  footer: "Wedding Content Creator in Málaga",
+  footer: "WCC IN MÁLAGA",
   meta: {
     title: "Wedding Content Creator in Málaga — Anna WedStories",
     description:
