@@ -508,7 +508,7 @@ function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
           <Link to={langPath(lang)} hash="faq" className="eyebrow hover:underline">{t.faq.eyebrow}</Link>
           <Link to={MALAGA_PATH} className="eyebrow hover:underline">{malaga.footer}</Link>
 
-          {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">Instagram</a>}
+          {INSTAGRAM_URL && <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex items-center text-muted-foreground transition-colors hover:text-foreground"><Instagram className="size-5" aria-hidden /></a>}
           {wa && <a href={wa} target="_blank" rel="noopener noreferrer" className="eyebrow hover:underline">WhatsApp</a>}
         </nav>
       </div>
