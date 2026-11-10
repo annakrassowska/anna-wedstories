@@ -502,7 +502,7 @@ function Footer({ t, wa, lang }: { t: Dict; wa: string | null; lang: Lang }) {
           <p className="font-serif text-3xl">Anna <em>WedStories</em></p>
           <p className="mt-2 text-sm text-muted-foreground">{t.footer.location}</p>
         </div>
-        <nav aria-label={t.footer.nav} className="flex flex-wrap gap-x-8 gap-y-3">
+        <nav aria-label={t.footer.nav} className="flex flex-wrap items-center gap-x-8 gap-y-3">
           {links.map(([k, h]) => <Link key={k} to={langPath(lang)} hash={h.slice(1)} className="eyebrow hover:underline">{t.nav[k]}</Link>)}
           <Link to={packagePath(lang)} className="eyebrow hover:underline">{t.packages.eyebrow}</Link>
           <Link to={langPath(lang)} hash="faq" className="eyebrow hover:underline">{t.faq.eyebrow}</Link>
