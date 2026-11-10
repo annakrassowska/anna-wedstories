@@ -154,7 +154,7 @@ const es: Dict = {
   nav: { home: "Inicio", about: "Sobre mí", services: "Servicios", contact: "Contacto", cta: "Consulta tu fecha", menu: "Abrir menú", close: "Cerrar menú", lang: "Idioma" },
   hero: {
     title: "Wedding content creator en\u00a0Málaga",
-    sub: "Revivid vuestra boda en menos de 24 horas. Vídeos espontáneos, emociones reales y recuerdos preciosos listos para compartir.",
+    sub: "Capturamos la magia de vuestra boda en Málaga, Marbella y Costa del Sol. Revivid vuestra boda en menos de 24 horas. Vídeos espontáneos, emociones reales y recuerdos preciosos listos para compartir.",
     location: "Málaga · Costa del Sol · España",
     cta: "Consulta tu fecha",
     cta2: "Descubre las historias",
@@ -288,7 +288,7 @@ const pl: Dict = {
   nav: { home: "Start", about: "O mnie", services: "Usługi", contact: "Kontakt", cta: "Sprawdź termin", menu: "Otwórz menu", close: "Zamknij menu", lang: "Język" },
   hero: {
     title: "Wedding content creator w\u00a0Maladze",
-    sub: "Przeżyjcie Wasz dzień ślubu na nowo w ciągu 24 godzin. Niepozowane filmy, prawdziwe emocje i piękne wspomnienia gotowe, by się nimi podzielić.",
+    sub: "Uchwycimy magię Waszego ślubu w Maladze, Marbelli i Costa del Sol. Przeżyjcie Wasz dzień ślubu na nowo w ciągu 24 godzin. Niepozowane filmy, prawdziwe emocje i piękne wspomnienia gotowe, by się nimi podzielić.",
     location: "Malaga · Costa del Sol · Hiszpania",
     cta: "Sprawdź termin",
     cta2: "Zobacz historie",
