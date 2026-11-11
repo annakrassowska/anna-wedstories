@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CreadoraDeContenidoBodasMalagaRouteImport } from './routes/creadora-de-contenido-bodas-malaga'
 import { Route as EsRouteImport } from './routes/es'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as PlRouteImport } from './routes/pl'
@@ -24,6 +25,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CreadoraDeContenidoBodasMalagaRoute =
+  CreadoraDeContenidoBodasMalagaRouteImport.update({
+    id: '/creadora-de-contenido-bodas-malaga',
+    path: '/creadora-de-contenido-bodas-malaga',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const EsRoute = EsRouteImport.update({
   id: '/es',
   path: '/es',
@@ -68,6 +75,7 @@ const PlPackagesRoute = PlPackagesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/creadora-de-contenido-bodas-malaga': typeof CreadoraDeContenidoBodasMalagaRoute
   '/es': typeof EsRoute
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
@@ -79,6 +87,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/creadora-de-contenido-bodas-malaga': typeof CreadoraDeContenidoBodasMalagaRoute
   '/es': typeof EsRoute
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
@@ -91,6 +100,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/creadora-de-contenido-bodas-malaga': typeof CreadoraDeContenidoBodasMalagaRoute
   '/es': typeof EsRoute
   '/packages': typeof PackagesRoute
   '/pl': typeof PlRoute
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/creadora-de-contenido-bodas-malaga'
     | '/es'
     | '/packages'
     | '/pl'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/creadora-de-contenido-bodas-malaga'
     | '/es'
     | '/packages'
     | '/pl'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/creadora-de-contenido-bodas-malaga'
     | '/es'
     | '/packages'
     | '/pl'
@@ -138,6 +151,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CreadoraDeContenidoBodasMalagaRoute: typeof CreadoraDeContenidoBodasMalagaRoute
   EsRoute: typeof EsRoute
   PackagesRoute: typeof PackagesRoute
   PlRoute: typeof PlRoute
@@ -155,6 +169,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creadora-de-contenido-bodas-malaga': {
+      id: '/creadora-de-contenido-bodas-malaga'
+      path: '/creadora-de-contenido-bodas-malaga'
+      fullPath: '/creadora-de-contenido-bodas-malaga'
+      preLoaderRoute: typeof CreadoraDeContenidoBodasMalagaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es': {
@@ -218,6 +239,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CreadoraDeContenidoBodasMalagaRoute: CreadoraDeContenidoBodasMalagaRoute,
   EsRoute: EsRoute,
   PackagesRoute: PackagesRoute,
   PlRoute: PlRoute,
