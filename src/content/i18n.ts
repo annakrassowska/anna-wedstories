@@ -11,13 +11,13 @@ export const malagaPath = (l: Lang) => l === "en" ? MALAGA_PATH : langPath(l);
 
 const en = {
   meta: {
-    title: "Anna WedStories — Wedding Content Creator in Málaga & Costa del Sol",
+    title: "Wedding Content Creator in Málaga — Anna WedStories",
     description:
       "Wedding content creator in Málaga, Marbella and the Costa del Sol. Natural wedding day content, Instagram Reels and Stories for couples marrying in Spain.",
   },
   nav: { home: "Home", about: "About", services: "Services", contact: "Contact", cta: "Check Your Date", menu: "Open menu", close: "Close menu", lang: "Language" },
   hero: {
-    title: "Wedding content creator in\u00a0Málaga",
+    title: "Wedding content creator in Málaga",
     sub: "Capturing the magic of your wedding in Málaga, Marbella & Costa del Sol. Relive your wedding day within 24 hours. Candid videos, genuine emotions, and beautiful memories ready to share.",
     location: "Málaga · Costa del Sol · Spain",
     cta: "Check Your Date",

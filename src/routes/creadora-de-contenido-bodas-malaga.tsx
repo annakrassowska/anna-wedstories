@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Site } from "@/components/Site";
-import { MALAGA_ES_PATH } from "@/content/i18n";
+import { MALAGA_PATH } from "@/content/i18n";
 import { malagaEs } from "@/content/malaga-es";
 import { EMAIL, INSTAGRAM_URL, SITE_URL } from "@/content/site";
 
-const pageUrl = SITE_URL + MALAGA_ES_PATH;
+const pageUrl = SITE_URL + MALAGA_PATH;
 
 // Search engines read this as a local business offering a service in Málaga,
 // so the offer, the area served and the breadcrumb are published as structured
@@ -71,5 +71,5 @@ export const Route = createFileRoute("/creadora-de-contenido-bodas-malaga")({
       { rel: "alternate", hrefLang: "x-default", href: pageUrl },
     ],
   }),
-  component: () => <Site lang="es" page="malaga-es" />,
+  component: () => <Site lang="es" page="malaga" />,
 });
