@@ -107,9 +107,10 @@ const en = {
   about: {
     eyebrow: "About",
     title: "Hi, I'm Anna.",
-    p1: "I'm the person behind Anna WedStories, capturing the little moments, real emotions, and beautiful details that make every wedding unique.",
-    alt: "Anna filming a wedding with her phone, standing beside white roses and palm trees wrapped in fairy lights",
-  },
+    p1: "Originally from Poland, I've called Málaga home since 2021. I studied architecture, which probably explains my love for beautiful details, aesthetics, composition, light, and finding beauty in the little things. What started as an appreciation for beautiful imagery and visual storytelling gradually grew into a love for wedding content creation.",
+    p2: "I love the idea of telling wedding stories in a new way - capturing the day as it unfolds through authentic, vertical videos. Preserving not only the big moments, but also the little details and genuine emotions, so couples can relive their wedding within just 24 hours.",
+    alt: "wedding content creator capturing wedding moments on her iPhone",
+  },  
   faq: {
     eyebrow: "FAQ",
     title: "Questions, answered.",
@@ -243,8 +244,9 @@ const es: Dict = {
   about: {
     eyebrow: "Sobre mí",
     title: "Hola, soy Anna.",
-    p1: "Soy la persona detrás de Anna WedStories y capturo los pequeños momentos, las emociones reales y los detalles bonitos que hacen única cada boda.",
-    alt: "Anna graba una boda con su teléfono, de pie junto a rosas blancas y palmeras envueltas en lucecitas",
+    p1: "Nací en Polonia, Málaga es mi hogar desde 2021. Estudié arquitectura, algo que probablemente explica mi amor por los pequeños detalles, la estética, la composición, la luz y la belleza que se esconde en las cosas más sencillas. Lo que comenzó como una admiración por las imágenes bonitas y el arte de contar historias a través de lo visual se convirtió en una pasión por la creación de contenido para bodas",
+    p2: "Me encanta la idea de contar las historias de las bodas de una manera diferente: capturando cada instante del día a medida que sucede, a través de vídeos verticales, naturales y auténticos. Conservando no solo los grandes momentos, sino también los pequeños detalles y las emociones más genuinas, para que las parejas puedan volver a vivir su boda en tan solo 24 horas.",
+    alt: "Anna wedding content creator graba una boda con su teléfono",
   },
   faq: {
     eyebrow: "FAQ",
@@ -377,8 +379,9 @@ const pl: Dict = {
   about: {
     eyebrow: "O mnie",
     title: "Cześć, jestem Ania.",
-    p1: "To ja stoję za Anna WedStories — uchwytuję drobne chwile, prawdziwe emocje i piękne detale, które sprawiają, że każdy ślub jest wyjątkowy.",
-    alt: "Anna nagrywa wesele telefonem, stojąc wśród białych róż i palm oplecionych lampkami",
+    p1: "Pochodzę z Polski, a od 2021 roku moim domem jest Málaga. Studiowałam architekturę, co prawdopodobnie tłumaczy moją miłość do pięknych detali, estetyki, kompozycji, światła i dostrzegania piękna w najdrobniejszych rzeczach.  To, co początkowo było zachwytem nad pięknymi obrazami i opowiadaniem historii, z czasem przerodziło się w miłość do tworzenia contentu ślubnego.",
+    p2: "Uwielbiam ideę opowiadania historii ślubnych w nowy sposób — uchwycenia dnia takim, jaki naprawdę jest, w trakcie jego trwania, za pomocą autentycznych, pionowych nagrań wideo. Chcę zachowywać nie tylko najważniejsze momenty, ale także drobne detale i prawdziwe emocje, aby pary mogły przeżyć swój dzień ślubu na nowo już w ciągu 24 godzin.",
+    alt: "Content creator nagrywa wesele telefonem",
   },
   faq: {
     eyebrow: "FAQ",

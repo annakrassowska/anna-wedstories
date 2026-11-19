@@ -10,7 +10,7 @@ import { Instagram, Play } from "lucide-react";
 // in src/assets keeping the same name, or update the import below.
 import heroVerticalAsset from "@/assets/IMG_2489.jpg";
 import detailAsset from "@/assets/IMG_2329.jpg";
-import creatorAsset from "@/assets/anna-foto.jpg";
+import creatorAsset from "@/assets/wedding-content-creator.jpg";
 
 
 function Reveal({ children, className = "" }: { children: ReactNode; className?: string }) {
@@ -431,6 +431,7 @@ function About({ t }: { t: Dict }) {
         <p className="eyebrow text-taupe">{t.about.eyebrow}</p>
         <h2 className="headline mt-5">{t.about.title}</h2>
         <p className="mt-8 text-lg leading-relaxed">{t.about.p1}</p>
+        <p className="mt-8 text-lg leading-relaxed">{t.about.p2}</p>
       </Reveal>
       <Reveal className="order-1 md:order-2 md:col-span-6 md:col-start-7">
         <img src={creatorAsset} alt={t.about.alt} width={1060} height={1498} loading="lazy" className="h-auto w-full" />
