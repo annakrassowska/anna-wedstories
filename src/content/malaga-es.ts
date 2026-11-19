@@ -76,7 +76,7 @@ export const malagaEs = {
       {
         name: "THE COMPLETE STORY",
         hours: "Hasta 12 horas",
-        price: "490 €",
+        price: "550 €",
         note: "Preparativos, ceremonia, momentos en pareja, cóctel, cena y fiesta, con 3 Reels de Instagram.",
       },
     ],

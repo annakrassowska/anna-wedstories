@@ -28,7 +28,7 @@ const serviceSchema = {
     { "@type": "City", name: "Estepona" },
     { "@type": "Place", name: "Costa del Sol" },
   ],
-  priceRange: "€290 - €490",
+  priceRange: "€290 - €550",
   sameAs: INSTAGRAM_URL ? [INSTAGRAM_URL] : [],
   makesOffer: malagaEs.packages.items.map((item) => ({
     "@type": "Offer",

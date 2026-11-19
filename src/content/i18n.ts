@@ -58,7 +58,7 @@ const en = {
       {
         name: "THE COMPLETE STORY",
         hours: "Up to 12 Hours",
-        price: "€490",
+        price: "€550",
         tagline: "From the excitement of getting ready to the last moments on the dance floor. Your entire wedding story, captured from beginning to end.",
         coverage: ["Getting ready", "Wedding ceremony", "Couple Moments", "Cocktail hour", "Dinner", "Party"],
         included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "3 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
@@ -194,7 +194,7 @@ const es: Dict = {
       {
         name: "THE COMPLETE STORY",
         hours: "Hasta 12 horas",
-        price: "490 €",
+        price: "550 €",
         tagline: "Desde la ilusión de los preparativos hasta los últimos momentos en la pista de baile. Toda la historia de vuestra boda, capturada de principio a fin.",
         coverage: ["Preparativos", "Ceremonia", "Momentos de los novios", "Cóctel", "Cena", "Fiesta"],
         included: ["Fotos y vídeos naturales y espontáneos", "Galería online entregada en 24 horas", "3 Reels de Instagram", "Vídeo resumen de 1 minuto", "Reunión preboda online (opcional)"],
@@ -328,7 +328,7 @@ const pl: Dict = {
       {
         name: "THE COMPLETE STORY",
         hours: "Do 12 godzin",
-        price: "490 €",
+        price: "550 €",
         tagline: "Od radości podczas przygotowań po ostatnie chwile na parkiecie. Cała historia Waszego ślubu, od początku do końca.",
         coverage: ["Przygotowania", "Ceremonia ślubna", "Chwile pary młodej", "Przyjęcie cocktailowe", "Obiad", "Zabawa weselna"],
         included: ["Naturalne, niepozowane zdjęcia i filmy", "Galeria online dostarczona w ciągu 24 godzin", "3 Reelsy na Instagram", "Minutowy film podsumowujący", "Spotkanie online przed ślubem (opcjonalnie)"],

@@ -17,9 +17,9 @@ describe.each(LANGS)("Packages page (%s)", (lang) => {
     expect(p.items.map((i) => i.name)).toEqual(["BASIC", "THE COMPLETE STORY"]);
   });
 
-  it("charges €290 for Basic and €490 for The Complete Story, with no VAT note", () => {
+  it("charges €290 for Basic and €550 for The Complete Story, with no VAT note", () => {
     expect(num(basic.price)).toBe(290);
-    expect(num(complete.price)).toBe(490);
+    expect(num(complete.price)).toBe(550);
     expect(basic.price).not.toMatch(/IVA|VAT/);
     expect(complete.price).not.toMatch(/IVA|VAT/);
   });

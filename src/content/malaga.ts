@@ -75,7 +75,7 @@ export const malaga = {
       {
         name: "THE COMPLETE STORY",
         hours: "Up to 12 Hours",
-        price: "€490",
+        price: "€550",
         note: "Getting ready, ceremony, couple moments, cocktail hour, dinner and party, with 3 Instagram Reels.",
       },
     ],
