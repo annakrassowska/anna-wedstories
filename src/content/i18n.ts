@@ -48,6 +48,14 @@ const en = {
     includedLabel: "What's included",
     items: [
       {
+        name: "Mini",
+        hours: "2 hours",
+        price: "€195",
+        tagline: "Perfect for capturing the essence of your wedding day.",
+        coverage: ["Ideal for capturing the ceremony and the first moments afterwards."],
+        included: ["Natural, candid photos & videos", "Online gallery delivered within 12 hours",  "instagram reels", "Optional online pre-wedding meeting"],
+      },
+      {
         name: "BASIC",
         hours: "4 Hours",
         price: "€290",
@@ -56,7 +64,7 @@ const en = {
         included: ["Natural, candid photos & videos", "Online gallery delivered within 24 hours", "2 Instagram Reels", "1-minute highlight video", "Optional online pre-wedding meeting"],
       },
       {
-        name: "THE COMPLETE STORY",
+        name: "Complete",
         hours: "Up to 12 Hours",
         price: "€550",
         tagline: "From the excitement of getting ready to the last moments on the dance floor. Your entire wedding story, captured from beginning to end.",
@@ -86,7 +94,7 @@ const en = {
   reels: {
     eyebrow: "Reels",
     title: "Watch the moments move.",
-    sub: "Short films from real weddings — the glances, the dances, the happy tears.",
+    sub: "Short filfms from real weddings — the glances, the dances, the happy tears.",
     follow: "Follow @anna_wedstories",
     watch: "Watch on Instagram",
     alts: [
@@ -184,6 +192,14 @@ const es: Dict = {
     coverageLabel: "La cobertura incluye",
     includedLabel: "Qué incluye",
     items: [
+      {
+        name: "Mini",
+        hours: "2 horas",
+        price: "€195",
+        tagline: "Perfecto para capturar la esencia de vuestro día.",
+        coverage: ["Horario a elegir por los novios,  ideal para capturar la ceremonia"],
+        included: ["Contenido natural (fotos y vídeos)", "Galería online entregada en 12 horas", "Reel de Instagram", "Reunión preboda online (opcional)"],
+      },
       {
         name: "BASIC",
         hours: "4 horas",
@@ -319,6 +335,14 @@ const pl: Dict = {
     coverageLabel: "Relacja obejmuje",
     includedLabel: "Co zawiera pakiet",
     items: [
+      {
+        name: "Mini",
+        hours: "2 godziny",
+        price: "€195",
+        tagline: "Idealny pakiet aby uchwycić najważniejszy moment Waszego dnia ślubu.",
+        coverage: ["2 godziny relacji"],
+        included: ["Naturalne, spontaniczne zdjęcia & filmy", "Galeria online dostarczona w ciągu 12 godzin", "Rolki na Instagram", "Opcjonalne spotkanie online przed ślubem"],
+      },
       {
         name: "BASIC",
         hours: "4 godziny",

@@ -198,7 +198,7 @@ function Packages({ t, lang }: { t: Dict; lang: Lang }) {
         <p className="mt-6 leading-relaxed text-muted-foreground">{p.intro}</p>
       </Reveal>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-2 md:gap-8">
+      <div className="mt-16 grid gap-6 md:grid-cols-3 md:gap-8">
         {p.items.map((item, i) => (
           <Reveal key={item.name} className={i === 1 ? "flex flex-col border border-foreground bg-secondary p-[10px]" : "flex flex-col border p-[10px]"}>
             <span className="eyebrow text-taupe">0{i + 1}</span>
